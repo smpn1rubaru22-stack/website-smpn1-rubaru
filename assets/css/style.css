@@ -371,200 +371,7 @@ section h2::after{
 
 }
 
-/* ===========================
-   FOOTER
-=========================== */
 
-footer{
-
-    background:#003b80;
-
-    color:#fff;
-
-    padding:60px 0 20px;
-
-    margin-top:60px;
-
-}
-
-footer h4{
-
-    margin-bottom:20px;
-
-    font-weight:600;
-
-}
-
-footer p{
-
-    line-height:30px;
-
-}
-
-.footer-social{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:12px;
-
-}
-
-.footer-social a{
-
-    color:#fff;
-
-    text-decoration:none;
-
-    transition:.3s;
-
-}
-
-.footer-social a:hover{
-
-    color:#ffd43b;
-
-    padding-left:8px;
-
-}
-
-.footer-social i{
-
-    width:25px;
-
-}
-
-footer iframe{
-
-    width:100%;
-
-    height:220px;
-
-    border-radius:15px;
-
-    border:none;
-
-}
-
-footer hr{
-
-    border-color:rgba(255,255,255,.3);
-
-    margin-top:40px;
-
-}
-
-footer .copyright{
-
-    text-align:center;
-
-    margin-top:20px;
-
-}
-
-/* ===========================
-   BUTTON
-=========================== */
-
-.btn-warning{
-
-    color:#fff;
-
-    font-weight:600;
-
-}
-
-.btn-warning:hover{
-
-    transform:scale(1.05);
-
-}
-
-/* ===========================
-   ANIMATION
-=========================== */
-
-.card,
-.btn,
-.nav-link,
-.social-navbar a{
-
-    transition:all .3s ease;
-
-}
-
-/* ===========================
-   RESPONSIVE
-=========================== */
-
-@media(max-width:991px){
-
-.navbar-brand h5{
-
-font-size:16px;
-
-}
-
-.slider-img{
-
-height:420px;
-
-}
-
-.carousel-caption{
-
-bottom:15%;
-
-}
-
-.carousel-caption h1{
-
-font-size:35px;
-
-}
-
-.carousel-caption p{
-
-font-size:18px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.slider-img{
-
-height:320px;
-
-}
-
-.carousel-caption{
-
-bottom:12%;
-
-}
-
-.carousel-caption h1{
-
-font-size:26px;
-
-}
-
-.carousel-caption p{
-
-font-size:15px;
-
-}
-
-.card img{
-
-height:200px;
-
-}
-
-}
 /* =======================
    BERITA
 ======================= */
@@ -630,83 +437,7 @@ height:200px;
 
 }
 
-/* =======================
-   FOOTER
-=======================*/
 
-.footer{
-
-    background:#0b3b63;
-    color:#ffffff;
-    padding:50px 0 20px;
-
-}
-
-.footer h4{
-
-    font-size:24px;
-    font-weight:700;
-    margin-bottom:20px;
-
-}
-
-.footer p{
-
-    font-size:15px;
-    line-height:28px;
-    margin-bottom:10px;
-
-}
-
-.footer a{
-
-    color:#ffffff;
-    text-decoration:none;
-    transition:.3s;
-
-}
-
-.footer a:hover{
-
-    color:#ffc107;
-
-}
-
-.footer ul{
-
-    padding-left:0;
-
-}
-
-.footer li{
-
-    list-style:none;
-
-}
-
-.footer iframe{
-
-    width:100%;
-    height:220px;
-    border:0;
-    border-radius:10px;
-
-}
-
-.footer hr{
-
-    border-color:rgba(255,255,255,.2);
-    margin:30px 0 15px;
-
-}
-
-.footer img{
-
-    background:#fff;
-    border-radius:50%;
-    padding:8px;
-
-}
 /*==================================
   HEADER PROFIL
 ==================================*/
@@ -2779,89 +2510,26 @@ font-size:28px;
 
 }
 
+/* ===========================
+   FOOTER SIMPLE
+=========================== */
 
-
-
-
-/* =====================
-   FOOTER KONTAK
-===================== */
-
-
-.footer-contact{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
+.footer-simple{
+    background:#0b3b63;
+    padding:20px 0;
+    margin-top:60px;
 }
 
-
-
-footer h3{
-
-    font-size:18px;
-
-}
-
-
-
-footer p{
-
-    font-size:14px;
-
-    line-height:1.6;
-
+.footer-simple .copyright{
+    text-align:center;
+    color:#fff;
+    font-size:15px;
+    letter-spacing:.3px;
 }
 
 
 
 
-
-
-
-/* =====================
-   RESPONSIVE HP
-===================== */
-
-
-@media(max-width:768px){
-
-
-.kontak-section{
-
-    grid-template-columns:1fr;
-
-    width:90%;
-
-}
-
-
-
-.hero-kontak{
-
-    padding:55px 20px 35px;
-
-}
-
-
-
-.hero-kontak h1{
-
-    font-size:28px;
-
-}
-
-
-
-.footer-contact{
-
-    grid-template-columns:1fr;
-
-}
-}
 /*======== HALAMAN BERITA=======*/
 .header-berita{
 
@@ -3008,4 +2676,248 @@ footer p{
     height:3px;
     background:#ffc107;
     border-radius:10px;
+}
+
+/*==============================
+        FOOTER BARU
+==============================*/
+
+.footer{
+
+    background:#0a3b63;
+
+    color:#fff;
+
+    padding:70px 0 25px;
+
+    margin-top:80px;
+
+}
+
+.footer .container{
+
+    max-width:1250px;
+
+}
+
+.footer h3{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.footer-line{
+
+    width:60px;
+
+    height:4px;
+
+    background:#ffc107;
+
+    border-radius:20px;
+
+    margin-bottom:25px;
+
+}
+
+.footer-logo{
+
+    width:95px;
+
+    height:95px;
+
+    object-fit:contain;
+
+    background:#fff;
+
+    padding:8px;
+
+    border-radius:50%;
+
+    margin-bottom:20px;
+
+}
+
+.footer p{
+
+    color:#e7e7e7;
+
+    line-height:34px;
+
+    font-size:17px;
+
+}
+
+/*=========================
+KONTAK
+=========================*/
+
+.footer-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+    margin-bottom:22px;
+
+}
+
+.footer-item i{
+
+    color:#ffc107;
+
+    width:22px;
+
+    font-size:20px;
+
+    margin-top:5px;
+
+}
+
+.footer-item span{
+
+    color:#fff;
+
+    line-height:30px;
+
+    font-size:17px;
+
+}
+
+/*=========================
+SOSMED
+=========================*/
+
+.footer-social{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:10px;
+
+}
+
+.footer-social a{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.12);
+
+    color:#fff;
+
+    font-size:24px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.footer-social a:hover{
+
+    background:#ffc107;
+
+    color:#0a3b63;
+
+    transform:translateY(-5px);
+
+}
+
+/*=========================
+MAP
+=========================*/
+
+.footer-map iframe{
+
+    width:100%;
+
+    height:240px;
+
+    border:none;
+
+    border-radius:15px;
+
+}
+
+/*=========================
+GARIS PEMBATAS
+=========================*/
+
+.footer hr{
+
+    margin:45px 0 20px;
+
+    border-color:rgba(255,255,255,.15);
+
+}
+
+.copyright{
+
+    text-align:center;
+
+    color:#ddd;
+
+    font-size:15px;
+
+}
+
+/*=========================
+RESPONSIVE
+=========================*/
+
+@media(max-width:991px){
+
+.footer{
+
+    text-align:center;
+
+}
+
+.footer-line{
+
+    margin:0 auto 25px;
+
+}
+
+.footer-item{
+
+    justify-content:center;
+
+}
+
+.footer-social{
+
+    justify-content:center;
+
+}
+
+.footer-logo{
+
+    margin:auto auto 20px;
+
+}
+
+.footer-map{
+
+    margin-top:20px;
+
+}
+
 }

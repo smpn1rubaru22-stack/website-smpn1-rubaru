@@ -96,14 +96,13 @@ if (!isset($_SESSION['login'])) {
             </div>
         </div>
 
-
         <div class="col-md-3 mb-3">
             <div class="card shadow text-center">
                 <div class="card-body">
 
-                    <h5>Kontak</h5>
+                    <h5>Fasilitas</h5>
 
-                    <a href="#" class="btn btn-primary">
+                    <a href="fasilitas.php" class="btn btn-primary">
                         Kelola
                     </a>
 
@@ -111,6 +110,21 @@ if (!isset($_SESSION['login'])) {
             </div>
         </div>
 
+        <div class="col-md-3 mb-3">
+            <div class="card shadow text-center">
+                <div class="card-body">
+
+                    <h5>Pengaturan</h5>
+
+                    <a href="pengaturan.php" class="btn btn-primary">
+                        Kelola
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        
 
     </div>
 

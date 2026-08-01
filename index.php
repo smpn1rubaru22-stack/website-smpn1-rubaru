@@ -1,10 +1,17 @@
 <?php
 require_once "config/koneksi.php";
 
+$slider = mysqli_query($conn,"SELECT * FROM slider ORDER BY urutan ASC");
+
 $queryBerita = mysqli_query($conn,
 "SELECT * FROM berita ORDER BY tanggal DESC LIMIT 5");
 
 $semuaBerita = mysqli_fetch_all($queryBerita, MYSQLI_ASSOC);
+
+// Ambil data kontak
+$kontak = mysqli_fetch_assoc(
+    mysqli_query($conn,"SELECT * FROM kontak LIMIT 1")
+);
 ?>
 
 <!DOCTYPE html>
@@ -31,134 +38,9 @@ $semuaBerita = mysqli_fetch_all($queryBerita, MYSQLI_ASSOC);
 </head>
 
 <body>
-    <?php
-$halaman = basename($_SERVER['PHP_SELF']);
-?>
+    <?php $halaman = basename($_SERVER['PHP_SELF']);?>
 
-<!-- ================= NAVBAR ================= -->
-
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
-
-    <div class="container">
-
-        <!-- Logo -->
-        <a class="navbar-brand d-flex align-items-center" href="index.php">
-
-            <img src="assets/img/logo.png"
-                 width="50"
-                 class="me-2">
-
-            <div>
-
-                <h6 class="mb-0 fw-bold">
-                    SMP Negeri 1 Rubaru
-                </h6>
-
-                <small>
-                    Kabupaten Sumenep
-                </small>
-
-            </div>
-
-        </a>
-
-        <!-- Toggle -->
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSekolah">
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
-
-        <!-- Menu -->
-        <div class="collapse navbar-collapse"
-             id="navbarSekolah">
-
-            <ul class="navbar-nav ms-auto align-items-lg-center">
-
-                <li class="nav-item">
-    <a class="nav-link <?= $halaman == 'index.php' ? 'active' : ''; ?>" href="index.php">
-        Beranda
-    </a>
-</li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="profil.php">
-                        Profil
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="fasilitas.php">
-                        Fasilitas
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="berita.php">
-                        Berita
-                    </a>
-                </li>
-
-                <!-- Dropdown Pelayanan -->
-
-                <li class="nav-item dropdown">
-
-    <a class="nav-link dropdown-toggle-custom"
-       href="#"
-       id="navbarPelayanan"
-       role="button"
-       data-bs-toggle="dropdown"
-       aria-expanded="false">
-
-        Pelayanan
-
-        <i class="fa-solid fa-chevron-down ms-1"></i>
-
-    </a>
-
-    <ul class="dropdown-menu shadow">
-
-        <li>
-            <a class="dropdown-item" href="pelayanan.php">
-                <i class="fa-solid fa-list-check me-2"></i>
-                Standar Pelayanan
-            </a>
-        </li>
-
-        <li>
-            <a class="dropdown-item" href="pengaduan.php">
-                <i class="fa-solid fa-comments me-2"></i>
-                Layanan Pengaduan
-            </a>
-        </li>
-
-    </ul>
-
-</li>
-                <li class="nav-item">
-
-                    <a class="nav-link"
-                       href="kontak.php">
-
-                        Kontak
-
-                    </a>
-
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</nav>
+<?php include "partial/navbar.php"; ?>
 
 <!-- ================= SLIDER ================= -->
 
@@ -168,95 +50,90 @@ $halaman = basename($_SERVER['PHP_SELF']);
      data-bs-interval="5000"
      data-bs-wrap="true"
      data-bs-pause="false">
+
+    <!-- Indicator -->
     <div class="carousel-indicators">
 
-    <button type="button"
+        <?php
+        $indikator = mysqli_query($conn,"SELECT * FROM slider ORDER BY urutan ASC");
+        $i = 0;
+
+        while($item = mysqli_fetch_assoc($indikator)){
+        ?>
+
+        <button
+            type="button"
             data-bs-target="#carouselSekolah"
-            data-bs-slide-to="0"
-            class="active"></button>
+            data-bs-slide-to="<?= $i; ?>"
+            class="<?= ($i==0)?'active':''; ?>">
+        </button>
 
-    <button type="button"
-            data-bs-target="#carouselSekolah"
-            data-bs-slide-to="1"></button>
+        <?php
+        $i++;
+        }
+        ?>
 
-    <button type="button"
-            data-bs-target="#carouselSekolah"
-            data-bs-slide-to="2"></button>
+    </div>
 
-</div>
-<div class="carousel-inner">
+    <!-- Isi Slider -->
+    <div class="carousel-inner">
 
-<div class="carousel-item active">
+        <?php
+        $no = 0;
 
-<img src="assets/img/slider1.jpg"
-class="d-block w-100 slider-img">
+        while($row = mysqli_fetch_assoc($slider)){
+        ?>
 
-<div class="carousel-caption">
+        <div class="carousel-item <?= ($no==0)?'active':''; ?>">
 
-<h1>Selamat Datang</h1>
+            <img
+                src="upload/slider/<?= $row['gambar']; ?>"
+                class="d-block w-100 slider-img"
+                alt="<?= $row['judul']; ?>">
 
-<p>Website Resmi SMP Negeri 1 Rubaru</p>
+            <div class="carousel-caption">
 
-<a href="profil.php"
-class="btn btn-warning btn-lg">
+                <h1><?= $row['judul']; ?></h1>
 
-Lihat Profil
+                <p><?= $row['deskripsi']; ?></p>
 
+                <?php if($no == 0){ ?>
+
+<a href="profil.php" class="btn btn-warning btn-lg">
+    Lihat Profil
 </a>
 
-</div>
+<?php } ?>
 
-</div>
+            </div>
 
-<div class="carousel-item">
+        </div>
 
-<img src="assets/img/slider2.jpg"
-class="d-block w-100 slider-img">
+        <?php
+        $no++;
+        }
+        ?>
 
-<div class="carousel-caption">
+    </div>
 
-<h1>Sekolah Ramah Anak</h1>
+    <!-- Tombol -->
+    <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselSekolah"
+            data-bs-slide="prev">
 
-<p>Mewujudkan Peserta Didik Berkarakter</p>
+        <span class="carousel-control-prev-icon"></span>
 
-</div>
+    </button>
 
-</div>
+    <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselSekolah"
+            data-bs-slide="next">
 
-<div class="carousel-item">
+        <span class="carousel-control-next-icon"></span>
 
-<img src="assets/img/slider3.jpg"
-class="d-block w-100 slider-img">
-
-<div class="carousel-caption">
-
-<h1>Prestasi & Inovasi</h1>
-
-<p>Bersama Meraih Masa Depan Gemilang</p>
-
-</div>
-
-</div>
-
-</div>
-
-<button class="carousel-control-prev"
-type="button"
-data-bs-target="#carouselSekolah"
-data-bs-slide="prev">
-
-<span class="carousel-control-prev-icon"></span>
-
-</button>
-
-<button class="carousel-control-next"
-type="button"
-data-bs-target="#carouselSekolah"
-data-bs-slide="next">
-
-<span class="carousel-control-next-icon"></span>
-
-</button>
+    </button>
 
 </div>
 
@@ -360,108 +237,9 @@ for ($i = 1; $i < count($semuaBerita); $i++) :
 </div>
 
 </section>
-</div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- ================= FOOTER ================= -->
-<footer class="footer mt-5">
+<?php include "partial/footer.php"; ?>
 
-    <div class="container">
-
-        <div class="row gy-4 align-items-start">
-
-            <!-- Logo -->
-            <div class="col-lg-3 col-md-6">
-
-                <img src="assets/img/logo.png" width="80" class="mb-3">
-
-                <h4>SMP Negeri 1 Rubaru</h4>
-
-                <p>
-                    Mewujudkan peserta didik yang beriman,
-                    berkarakter, berprestasi, dan berwawasan lingkungan.
-                </p>
-
-            </div>
-
-            <!-- Alamat -->
-            <div class="col-lg-3 col-md-6">
-
-                <h4>Alamat</h4>
-
-                <p>
-                    Jl. Raya Rubaru<br>
-                    Ds. Banasare, Kec.Rubaru<br>
-                    Kab. Sumenep<br>
-                    Jawa Timur
-                </p>
-
-                <p>
-                    <i class="fa-solid fa-phone"></i>
-                    +62851-3038-8280
-                </p>
-
-                <p>
-                    <i class="fa-solid fa-envelope"></i>
-                    Smpn1.rubaru21@gmail.com
-                </p>
-
-            </div>
-
-            <!-- Media Sosial -->
-            <div class="col-lg-2 col-md-6">
-
-                <h4>Media Sosial</h4>
-
-                <ul class="list-unstyled">
-
-                    <li class="mb-2">
-                        <a href="https://www.instagram.com/smpn1rubaru?igsh=MWw2bmhpdTFrdmJvdQ==" target="_blank">
-                            <i class="fab fa-instagram"></i> Instagram
-                        </a>
-                    </li>
-
-                    <li class="mb-2">
-                        <a href="https://youtube.com/@smpn1rubaru47?si=3uPGDYo9iCvbiFrI" target="_blank">
-                            <i class="fab fa-youtube"></i> YouTube
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://tiktok.com/@smpn1.rubaru" target="_blank">
-                            <i class="fab fa-tiktok"></i> TikTok
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <!-- Maps -->
-            <div class="col-lg-4 col-md-6">
-
-                <h4>Lokasi Sekolah</h4>
-
-                <iframe
-                    src="https://www.google.com/maps?q=SMP+Negeri+1+Rubaru&output=embed"
-                    loading="lazy"
-                    allowfullscreen>
-                </iframe>
-
-            </div>
-
-        </div>
-
-        <hr>
-
-        <div class="text-center">
-
-            © 2026 SMP Negeri 1 Rubaru | All Rights Reserved
-
-        </div>
-
-    </div>
-
-</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
