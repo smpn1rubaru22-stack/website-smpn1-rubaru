@@ -62,16 +62,24 @@ if(!$layanan){
 <?php
 $persyaratan = preg_split('/\r\n|\r|\n/', $layanan['persyaratan']);
 
+echo "<ul>";
+
 foreach($persyaratan as $item){
 
-    if(trim($item)!=""){
-?>
+    $item = trim($item);
 
-<li><?= htmlspecialchars(trim($item)); ?></li>
+    if($item=="") continue;
 
-<?php
+    if(preg_match('/^[A-Za-z]\./',$item)){
+        echo "</ul>";
+        echo "<h4 class='subjudul'>".htmlspecialchars($item)."</h4>";
+        echo "<ul>";
+    }else{
+        echo "<li>".htmlspecialchars($item)."</li>";
     }
 }
+
+echo "</ul>";
 ?>
 
 </ul>
@@ -87,18 +95,26 @@ foreach($persyaratan as $item){
 <ol>
 
 <?php
-$prosedur = preg_split('/\r\n|\r|\n/', $layanan['prosedur']);
+$pelayanan = preg_split('/\r\n|\r|\n/', $layanan['persyaratan']);
 
-foreach($prosedur as $item){
+echo "<ul>";
 
-    if(trim($item)!=""){
-?>
+foreach($persyaratan as $item){
 
-<li><?= htmlspecialchars(trim($item)); ?></li>
+    $item = trim($item);
 
-<?php
+    if($item=="") continue;
+
+    if(preg_match('/^[A-Za-z]\./',$item)){
+        echo "</ul>";
+        echo "<h4 class='subjudul'>".htmlspecialchars($item)."</h4>";
+        echo "<ul>";
+    }else{
+        echo "<li>".htmlspecialchars($item)."</li>";
     }
 }
+
+echo "</ul>";
 ?>
 
 </ol>

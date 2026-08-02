@@ -1569,146 +1569,107 @@ PDF VIEWER dokymen standar pelayanan
     transform: translateY(-3px);
 
 }
-/* =====================================
-   DETAIL HALAMAN LAYANAN (spmb, mutasi, dst)
-===================================== */
 
-.detail-layanan-page {
-    background: #f4f8fd;
-    min-height: 100vh;
-    padding: 60px 20px;
+/* =====================================================
+   DETAIL LAYANAN
+===================================================== */
+
+.detail-layanan-page{
+    background:#f4f8fd;
+    min-height:100vh;
+    padding:45px 20px;
 }
 
+/* ================= CARD ================= */
 
-.detail-card {
-
-    max-width: 1100px;
-
-    margin: auto;
-
-    background: white;
-
-    padding: 45px 55px;
-
-    border-radius: 20px;
-
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-
+.detail-card{
+    width:75%;
+    max-width:850px;
+    margin:0 auto;
+    background:#fff;
+    border-radius:16px;
+    padding:35px 40px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
+/* ================= HEADER ================= */
 
-
-/* Header */
-
-.detail-header {
-
+.detail-header{
     text-align:center;
-
-    margin-bottom:40px;
-
+    margin-bottom:35px;
 }
 
-
-.detail-header .icon {
-
-    width:80px;
-
-    height:80px;
-
-    background:#0866ff;
-
-    color:white;
-
-    border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:35px;
-
-    margin:auto;
-
+.detail-header h1{
+    font-size:32px;
+    color:#0d6efd;
+    font-weight:700;
+    margin-bottom:10px;
+    line-height:1.4;
 }
 
-
-
-.detail-header h1 {
-
-    margin-top:20px;
-
-    font-size:34px;
-
-    color:#0866ff;
-
-}
-
-
-.detail-header p {
-
-    color:#666;
-
-    line-height:1.7;
-
-}
-
-
-
-/* garis */
-
-.detail-header .line {
-
-    width:80px;
-
+.detail-header .line{
+    width:70px;
     height:4px;
-
-    background:#ffc400;
-
-    margin:15px auto;
-
-    border-radius:5px;
-
+    background:#ffc107;
+    border-radius:50px;
+    margin:12px auto 18px;
 }
 
+.detail-header p{
+    font-size:15px;
+    color:#666;
+    line-height:1.9;
+    text-align:justify;
+}
 
+/* ================= SECTION ================= */
 
-/* Isi layanan */
+.layanan-section{
+    margin-bottom:25px;
+}
 
-.layanan-section {
+.layanan-section h3{
+    font-size:20px;
+    font-weight:600;
+    color:#0d6efd;
+    margin-bottom:15px;
+    border-left:4px solid #0d6efd;
+    padding-left:10px;
+}
 
-    margin-top:30px;
-
+.layanan-section ul,
+.layanan-section ol{
+    padding-left:22px;
+    margin:0;
 }
 
 .layanan-section li{
-    margin-bottom:10px;
-    line-height:1.8;
+    font-size:15px;
+    line-height:1.9;
+    color:#444;
+    margin-bottom:8px;
 }
 
-.layanan-section ol li::marker,
-.layanan-section ul li::marker{
-    color:#555;
-    font-weight:600;
+.layanan-section ul li::marker,
+.layanan-section ol li::marker{
+    color:#0d6efd;
+    font-weight:bold;
 }
 
-/* ===== Kotak Informasi ===== */
+/* ================= BOX INFORMASI ================= */
 
 .layanan-box,
 .info-box{
 
-    background:#f5f9ff;
+    background:#f8fbff;
 
-    border-left:5px solid #0d6efd;
+    border-left:4px solid #0d6efd;
 
-    border-radius:15px;
+    border-radius:12px;
 
-    padding:22px 25px;
+    padding:18px 22px;
 
-    margin-top:22px;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.05);
+    margin-bottom:18px;
 
     transition:.3s;
 
@@ -1717,11 +1678,12 @@ PDF VIEWER dokymen standar pelayanan
 .layanan-box:hover,
 .info-box:hover{
 
-    transform:translateY(-3px);
+    transform:translateY(-2px);
 
-    box-shadow:0 12px 25px rgba(0,0,0,.08);
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
 
 }
+
 .layanan-box h4,
 .info-box strong{
 
@@ -1729,62 +1691,52 @@ PDF VIEWER dokymen standar pelayanan
 
     align-items:center;
 
-    gap:10px;
+    gap:8px;
 
-    font-size:22px;
+    font-size:17px;
 
-    font-weight:700;
+    font-weight:600;
 
     color:#0d6efd;
 
-    margin-bottom:12px;
+    margin-bottom:10px;
 
 }
+
 .layanan-box p,
 .info-box p{
 
-    margin:0;
+    font-size:15px;
+
+    line-height:1.8;
 
     color:#444;
 
-    font-size:18px;
-
-    line-height:1.8;
+    margin:0;
 
     text-align:justify;
 
 }
-.layanan-box h4 i,
-.info-box strong i{
 
-    color:#f59e0b;
+/* ================= TOMBOL ================= */
 
-    font-size:20px;
+.btn-kembali{
 
-    width:25px;
+    display:inline-block;
 
-}
+    margin-top:25px;
 
+    padding:12px 28px;
 
-/* tombol */
+    background:#0d6efd;
 
-.btn-kembali {
-
-    display:flex;
-
-    width:max-content;
-
-    margin:40px auto 0;
-
-    padding:15px 35px;
-
-    background:#0866ff;
-
-    color:white!important;
+    color:#fff !important;
 
     text-decoration:none;
 
-    border-radius:12px;
+    border-radius:8px;
+
+    font-size:15px;
 
     font-weight:600;
 
@@ -1792,119 +1744,86 @@ PDF VIEWER dokymen standar pelayanan
 
 }
 
+.btn-kembali:hover{
 
-.btn-kembali:hover {
-
-    background:#004bcc;
-
-    transform:translateY(-3px);
+    background:#084298;
 
 }
 
+/* ================= RESPONSIVE ================= */
 
-
-/* HP */
-
-@media(max-width:768px){
+@media(max-width:992px){
 
 .detail-card{
 
-padding:30px 20px;
+    width:90%;
+    padding:30px;
 
 }
 
+}
+
+@media(max-width:768px){
+
+.detail-layanan-page{
+
+    padding:20px 10px;
+
+}
+
+.detail-card{
+
+    width:95%;
+    padding:22px;
+
+}
 
 .detail-header h1{
 
-font-size:28px;
+    font-size:26px;
+
+}
+
+.detail-header p{
+
+    font-size:14px;
+
+}
+
+.layanan-section h3{
+
+    font-size:18px;
+
+}
+
+.layanan-section li{
+
+    font-size:14px;
+
+}
+
+.layanan-box h4,
+.info-box strong{
+
+    font-size:16px;
+
+}
+
+.layanan-box p,
+.info-box p{
+
+    font-size:14px;
+
+}
+
+.btn-kembali{
+
+    width:100%;
+    text-align:center;
 
 }
 
 }
-/* ==================================================
-   HALAMAN LAYANAN PENGADUAN
-   SMP NEGERI 1 RUBARU
-================================================== */
-
-
-/* CONTAINER UTAMA */
-
-.layanan-detail{
-
-    max-width: 950px;
-
-    margin: 60px auto;
-
-    background: #ffffff;
-
-    padding: 45px 55px;
-
-    border-radius: 25px;
-
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-
-}
-
-
-
-
-/* JUDUL */
-
-.layanan-detail h1{
-
-    text-align: center;
-
-    color: #0866ff;
-
-    font-size: 34px;
-
-    font-weight: 700;
-
-    margin-bottom: 10px;
-
-}
-
-
-
-
-/* GARIS PEMBATAS */
-
-.garis{
-
-    width: 80px;
-
-    height: 4px;
-
-    background: #ffc400;
-
-    margin: 15px auto 30px;
-
-    border-radius: 10px;
-
-}
-
-
-
-
-
-/* DESKRIPSI */
-
-.deskripsi-layanan{
-
-    text-align: center;
-
-    color: #666;
-
-    line-height: 1.9;
-
-    font-size: 16px;
-
-    margin-bottom: 35px;
-
-}
-
-
-
 
 
 /* ==================================
