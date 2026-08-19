@@ -252,9 +252,9 @@ foreach ($misi as $item) {
             <?php if(!empty($struktur['gambar'])){ ?>
 
 <img
-    src="upload/struktur/<?= htmlspecialchars($struktur['gambar']); ?>"
-    class="img-fluid struktur-img"
-    alt="Struktur Organisasi">
+    src="upload/struktur/<?= $struktur['gambar']; ?>"
+    alt="Struktur Organisasi"
+    style="width:300px; height:auto; display:block; margin:auto;">
 
 <?php }else{ ?>
 

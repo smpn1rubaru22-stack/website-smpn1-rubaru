@@ -307,98 +307,106 @@ section h2::after{
 
 }
 
-/* ===========================
+
+
+/* ==================================================
    CARD BERITA
-=========================== */
+================================================== */
 
 .card{
-
     border:none;
-
     border-radius:18px;
-
     overflow:hidden;
-
-    transition:.35s;
-
     box-shadow:0 10px 30px rgba(0,0,0,.08);
-
+    transition:.35s;
 }
 
 .card:hover{
-
-    transform:translateY(-12px);
-
-    box-shadow:0 20px 45px rgba(0,0,0,.15);
-
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
 }
 
-.card img{
 
-    height:220px;
+
+
+/* ==================================================
+   BERITA UTAMA
+================================================== */
+
+.berita-utama{
+
+    width:100%;
+
+    height:350px;
 
     object-fit:cover;
+
+    object-position:center center;
+
+    display:block;
 
 }
 
 .card-body{
 
-    padding:22px;
+    padding:28px;
 
 }
 
-.card-title{
-
-    font-size:22px;
+.card-body h3{
 
     color:#0d6efd;
 
+    font-size:32px;
+
+    font-weight:700;
+
+    line-height:1.35;
+
+    margin-bottom:12px;
+
+}
+
+.card-body p{
+
+    font-size:16px;
+
+    color:#555;
+
+    line-height:1.8;
+
+}
+
+.card-body a{
+
     font-weight:600;
 
-}
-
-.card-text{
-
-    color:#666;
-
-}
-
-.btn-primary{
-
-    border-radius:30px;
-
-    padding:10px 25px;
+    text-decoration:none;
 
 }
 
 
-/* =======================
-   BERITA
-======================= */
-
-.berita-utama{
-
-    height:450px;
-
-    object-fit:cover;
-
-}
+/* ==================================================
+   BERITA KECIL
+================================================== */
 
 .berita-kecil{
 
     display:flex;
 
-    gap:12px;
+    gap:15px;
 
     background:#fff;
 
-    padding:12px;
+    padding:15px;
 
-    border-radius:12px;
+    border-radius:14px;
 
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
 
     transition:.3s;
+
+    align-items:flex-start;
 
 }
 
@@ -410,33 +418,100 @@ section h2::after{
 
 .berita-kecil img{
 
-    width:120px;
+    width:125px;
 
-    height:90px;
+    height:95px;
 
     object-fit:cover;
 
     border-radius:10px;
 
+    flex-shrink:0;
+
+}
+
+.berita-kecil small{
+
+    color:#0d6efd;
+
+    font-size:13px;
+
+    font-weight:500;
+
 }
 
 .berita-kecil h6{
 
-    margin-top:5px;
+    margin:8px 0;
 
-    font-size:14px;
+    font-size:15px;
 
-    line-height:24px;
+    line-height:1.5;
+
+    font-weight:600;
 
 }
 
 .berita-kecil a{
 
+    color:#0d6efd;
+
     text-decoration:none;
+
+    font-size:14px;
+
     font-weight:600;
 
 }
 
+.berita-kecil a:hover{
+
+    color:#084298;
+
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media(max-width:992px){
+
+    .berita-utama{
+
+        height:360px;
+
+    }
+
+    .card-body h3{
+
+        font-size:28px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .berita-utama{
+
+        height:250px;
+
+    }
+
+    .card-body{
+
+        padding:20px;
+
+    }
+
+    .card-body h3{
+
+        font-size:24px;
+
+    }
+
+}
 
 /*==================================
   HEADER PROFIL
@@ -715,10 +790,10 @@ GURU & TENAGA KEPENDIDIKAN
 }
 
 .struktur-img{
-    max-width:900px;
-    width:100%;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .section-line{
