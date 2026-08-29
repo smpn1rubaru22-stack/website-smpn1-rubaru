@@ -15,7 +15,7 @@ $fasilitas = mysqli_query($conn,
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Profil | SMP Negeri 1 Rubaru</title>
+    <title>Fasilitas | SMP Negeri 1 Rubaru</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@ $fasilitas = mysqli_query($conn,
         rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=3">
 
 </head>
 <body>
