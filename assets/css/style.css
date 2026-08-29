@@ -894,7 +894,7 @@ HEADER FASILITAS
 
 .fasilitas-header{
 
-    padding:90px 0;
+    padding:120px 0 60px;
 
     background:#ffffff;
 
@@ -1225,7 +1225,7 @@ HALAMAN STANDAR PELAYANAN
 
 .pelayanan-header{
 
-    padding:90px 0;
+    padding:140px 0 70px;
     background:#ffffff;
 
 }
@@ -1521,25 +1521,37 @@ margin-bottom:30px;
 
 @media(max-width:768px){
 
-.pelayanan-header{
+    .pelayanan-header{
 
-padding:60px 0;
+        padding:100px 15px 60px;
 
-}
+        text-align:center;
 
-.pelayanan-header h1{
+    }
 
-font-size:35px;
+    .pelayanan-header h1{
 
-}
+        font-size:35px;
 
-.pelayanan-header p{
+    }
 
-font-size:16px;
+    .pelayanan-header p{
 
-line-height:30px;
+        font-size:16px;
 
-}
+        line-height:30px;
+
+        text-align:center;
+
+    }
+
+    .pelayanan-cover{
+
+        height:300px;
+
+        margin-bottom:30px;
+
+    }
 
 }
 /*=====================================
@@ -3315,7 +3327,7 @@ RESPONSIVE FOOTER
     }
 
 
-    
+
     .slider-img{
         height:340px !important;
     }
