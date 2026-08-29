@@ -93,43 +93,70 @@ LIMIT 3
 
         </p>
 
-        <div class="row g-5 align-items-start">
+       
+<div class="row g-5 align-items-start">
 
-            <!-- ================= ISI BERITA ================= -->
+    <!-- ================= ISI BERITA ================= -->
 
-            <div class="col-lg-8">
+    <div class="col-lg-8">
 
-                <div class="detail-isi">
+        <div class="detail-isi">
 
-                    <?= nl2br($berita['isi']); ?>
+            <?php
+            // Pisahkan isi berita berdasarkan paragraf
+            $paragraf = preg_split('/\r\n|\r|\n/', trim($berita['isi']));
 
-                </div>
+            // Hapus paragraf kosong
+            $paragraf = array_values(array_filter($paragraf, function($p){
+                return trim($p) !== '';
+            }));
 
-            </div>
+            $jumlah = count($paragraf);
 
-            <!-- ================= FOTO ================= -->
+            // Tentukan posisi gambar
+            $posisiGambar2 = ceil($jumlah / 3);
+            $posisiGambar3 = ceil(($jumlah * 2) / 3);
 
-<div class="col-lg-4">
+            // Gambar 1 - AWAL
+            if(!empty($berita['gambar1'])) {
+            ?>
+                <img src="upload/berita/<?= htmlspecialchars($berita['gambar1']); ?>"
+                     class="img-fluid rounded shadow detail-gambar-tengah mb-4"
+                     alt="<?= htmlspecialchars($berita['judul']); ?>">
+            <?php
+            }
 
-    <img src="upload/berita/<?= $berita['gambar1']; ?>"
-         class="img-fluid rounded shadow detail-gambar mb-3"
-         alt="<?= htmlspecialchars($berita['judul']); ?>">
+            // Tampilkan paragraf satu per satu
+            foreach($paragraf as $index => $p) {
 
-    <?php if(!empty($berita['gambar2'])) { ?>
-    <img src="upload/berita/<?= $berita['gambar2']; ?>"
-         class="img-fluid rounded shadow detail-gambar mb-3"
-         alt="<?= htmlspecialchars($berita['judul']); ?>">
-    <?php } ?>
+                echo '<p>' . htmlspecialchars($p) . '</p>';
 
-    <?php if(!empty($berita['gambar3'])) { ?>
-    <img src="upload/berita/<?= $berita['gambar3']; ?>"
-         class="img-fluid rounded shadow detail-gambar"
-         alt="<?= htmlspecialchars($berita['judul']); ?>">
-    <?php } ?>
+                // Gambar 2 - TENGAH
+                if(($index + 1) == $posisiGambar2 && !empty($berita['gambar2'])) {
+                ?>
+                    <img src="upload/berita/<?= htmlspecialchars($berita['gambar2']); ?>"
+                         class="img-fluid rounded shadow detail-gambar-tengah mb-4"
+                         alt="<?= htmlspecialchars($berita['judul']); ?>">
+                <?php
+                }
 
+                // Gambar 3 - AKHIR
+                if(($index + 1) == $posisiGambar3 && !empty($berita['gambar3'])) {
+                ?>
+                    <img src="upload/berita/<?= htmlspecialchars($berita['gambar3']); ?>"
+                         class="img-fluid rounded shadow detail-gambar-tengah mb-4"
+                         alt="<?= htmlspecialchars($berita['judul']); ?>">
+                <?php
+                }
+            }
+            ?>
+
+        </div>
+
+    </div>
 </div>
-</div>
-</div>
+```
+
 </section>
 
 <!-- ================= BERITA LAINNYA ================= -->
