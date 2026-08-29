@@ -2915,3 +2915,207 @@ RESPONSIVE
 }
 
 }
+
+/* ==================================================
+   TAMPILAN HP
+   HEADER LEBIH PENDEK & LANDSCAPE
+================================================== */
+
+@media (max-width: 768px){
+
+    /* =========================
+       HEADER / NAVBAR
+    ========================= */
+
+    .custom-navbar{
+        padding:6px 12px !important;
+        min-height:72px;
+    }
+
+    /* Logo sekolah */
+    .navbar-brand img{
+        width:48px !important;
+        height:48px !important;
+        object-fit:contain;
+    }
+
+    /* Area nama sekolah */
+    .navbar-brand{
+        display:flex;
+        align-items:center;
+        gap:8px;
+        padding:0 !important;
+        margin:0 !important;
+    }
+
+    /* Nama SMP */
+    .navbar-brand h6{
+        font-size:14px !important;
+        font-weight:600 !important;
+        line-height:1.2;
+        margin:0 !important;
+    }
+
+    /* Kabupaten Sumenep */
+    .navbar-brand small{
+        display:block;
+        font-size:10px !important;
+        line-height:1.2;
+        margin-top:2px;
+    }
+
+    /* Tombol hamburger */
+    .navbar-toggler{
+        padding:6px 8px !important;
+        border-radius:8px !important;
+    }
+
+    .navbar-toggler-icon{
+        width:22px !important;
+        height:22px !important;
+    }
+
+
+    /* =========================
+       MENU SAAT HAMBURGER DIBUKA
+    ========================= */
+
+    .navbar-nav{
+        margin-top:8px;
+        padding-bottom:5px;
+    }
+
+    .navbar-nav .nav-link{
+        font-size:13px !important;
+        font-weight:500 !important;
+        margin-left:0 !important;
+        padding:7px 4px !important;
+    }
+
+    .dropdown-toggle-custom{
+        font-size:13px !important;
+    }
+
+    .dropdown-toggle-custom i{
+        font-size:10px !important;
+        margin-left:4px;
+    }
+
+    .dropdown-menu{
+        margin-top:3px !important;
+        border-radius:10px;
+    }
+
+    .dropdown-item{
+        font-size:12px !important;
+        padding:8px 14px !important;
+    }
+
+
+    /* =========================
+       SOCIAL MEDIA
+    ========================= */
+
+    .navbar .fa-instagram,
+    .navbar .fa-youtube,
+    .navbar .fa-tiktok{
+        font-size:18px !important;
+    }
+
+
+    /* =========================
+       SLIDER
+    ========================= */
+
+    .slider-img{
+        height:390px !important;
+        object-fit:cover;
+        object-position:center center;
+    }
+
+    .carousel-caption{
+        bottom:16% !important;
+        padding:0 15px;
+    }
+
+    .carousel-caption h1{
+        font-size:38px !important;
+        line-height:1.1;
+        margin-bottom:12px;
+    }
+
+    .carousel-caption p{
+        font-size:16px !important;
+        line-height:1.4;
+        margin-bottom:18px;
+    }
+
+    .carousel-caption .btn{
+        padding:9px 25px !important;
+        font-size:15px !important;
+    }
+
+}
+
+
+/* ==================================================
+   HP SANGAT KECIL
+================================================== */
+
+@media (max-width:480px){
+
+    .custom-navbar{
+        min-height:68px;
+        padding:5px 10px !important;
+    }
+
+    .navbar-brand img{
+        width:44px !important;
+        height:44px !important;
+    }
+
+    .navbar-brand{
+        gap:7px;
+    }
+
+    .navbar-brand h6{
+        font-size:13px !important;
+    }
+
+    .navbar-brand small{
+        font-size:9px !important;
+    }
+
+    .navbar-toggler{
+        padding:5px 7px !important;
+    }
+
+    .navbar-toggler-icon{
+        width:20px !important;
+        height:20px !important;
+    }
+
+
+    /* Slider lebih landscape */
+    .slider-img{
+        height:340px !important;
+    }
+
+    .carousel-caption{
+        bottom:14% !important;
+    }
+
+    .carousel-caption h1{
+        font-size:34px !important;
+    }
+
+    .carousel-caption p{
+        font-size:15px !important;
+    }
+
+    .carousel-caption .btn{
+        font-size:14px !important;
+        padding:8px 22px !important;
+    }
+
+}
