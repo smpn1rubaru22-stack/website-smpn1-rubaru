@@ -2921,7 +2921,12 @@ RESPONSIVE
    HEADER LEBIH PENDEK & LANDSCAPE
 ================================================== */
 
-@media (max-width: 768px){
+.navbar-brand img{
+    width:48px !important;
+    height:48px !important;
+    object-fit:contain;
+    margin-right:0 !important;
+}
 
     /* =========================
        HEADER / NAVBAR
