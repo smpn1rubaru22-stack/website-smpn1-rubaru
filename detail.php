@@ -40,22 +40,67 @@ LIMIT 3
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SMP Negeri 1 Rubaru</title>
+```
+<?php
+// URL website
+$base_url = "https://smpn1rubaru.sch.id";
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+// URL halaman berita
+$url_berita = $base_url . "/detail.php?slug=" . urlencode($berita['slug']);
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+// URL gambar utama berita
+$gambar_berita = $base_url . "/upload/berita/" . rawurlencode($berita['gambar1']);
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+// Deskripsi berita
+$deskripsi_berita = substr(
+    trim(strip_tags($berita['isi'])),
+    0,
+    160
+);
+?>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+<!-- Judul halaman -->
+<title><?= htmlspecialchars($berita['judul']); ?> - SMP Negeri 1 Rubaru</title>
+
+<!-- Deskripsi -->
+<meta name="description"
+      content="<?= htmlspecialchars($deskripsi_berita); ?>">
+
+<!-- ==============================
+     OPEN GRAPH
+============================== -->
+
+<meta property="og:type" content="article">
+
+<meta property="og:title"
+      content="<?= htmlspecialchars($berita['judul']); ?>">
+
+<meta property="og:description"
+      content="<?= htmlspecialchars($deskripsi_berita); ?>">
+
+<meta property="og:url"
+      content="<?= htmlspecialchars($url_berita); ?>">
+
+<meta property="og:site_name"
+      content="SMP Negeri 1 Rubaru">
+
+<meta property="og:image"
+      content="<?= htmlspecialchars($gambar_berita); ?>">
+
+<meta property="og:image:secure_url"
+      content="<?= htmlspecialchars($gambar_berita); ?>">
+
+<meta property="og:image:type"
+      content="image/jpeg">
+
+<meta property="og:image:width"
+      content="1200">
+
+<meta property="og:image:height"
+      content="630">
 
 </head>
+
 
 <body>
 <?php include "partial/navbar.php"; ?>
