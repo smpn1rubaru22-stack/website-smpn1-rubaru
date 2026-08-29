@@ -3088,61 +3088,73 @@ RESPONSIVE FOOTER
         font-size:22px;
     }
 
+/* =========================
+   FASILITAS
+========================= */
 
-    /* =========================
-       FASILITAS
-    ========================= */
+.fasilitas-header{
+    padding:100px 15px 60px !important;
+    text-align:center;
+}
 
-    .fasilitas-header{
-        padding:60px 0;
-        text-align:center;
-    }
+.fasilitas-header h1{
+    font-size:36px;
+}
 
-    .fasilitas-header h1{
-        font-size:36px;
-    }
+.fasilitas-header p{
+    font-size:16px;
+    line-height:30px;
+    text-align:center;
+}
 
-    .fasilitas-header p{
-        font-size:16px;
-        line-height:30px;
-        text-align:center;
-    }
+.fasilitas-cover{
+    height:250px;
+    margin-bottom:35px;
+}
 
-    .fasilitas-cover{
-        height:250px;
-        margin-bottom:35px;
-    }
+.fasilitas-list h2{
+    font-size:30px;
+}
 
-    .fasilitas-list h2{
-        font-size:30px;
-    }
+   /* =========================
+   PELAYANAN
+========================= */
 
+.pelayanan-header{
+    padding:100px 15px 60px !important;
+    text-align:center;
+}
 
-    /* =========================
-       PELAYANAN
-    ========================= */
+.pelayanan-header h1{
+    font-size:35px;
+}
 
-    .pelayanan-header{
-        padding:60px 0;
-        text-align:center;
-    }
+.pelayanan-header p{
+    font-size:16px;
+    line-height:30px;
+    text-align:center;
+}
 
-    .pelayanan-header h1{
-        font-size:35px;
-    }
+.pelayanan-cover{
+    height:300px;
+    margin-bottom:30px;
+}
 
-    .pelayanan-header p{
-        font-size:16px;
-        line-height:30px;
-        text-align:center;
-    }
+.standar-pelayanan{
+    padding:50px 15px;
+}
 
-    .pelayanan-cover{
-        height:300px;
-        margin-bottom:30px;
-    }
+.standar-pelayanan h2{
+    font-size:30px;
+}
 
+.service-box{
+    padding:25px 20px;
+}
 
+.layanan-card{
+    padding:25px 20px;
+}
     /* =========================
        DETAIL LAYANAN
     ========================= */
