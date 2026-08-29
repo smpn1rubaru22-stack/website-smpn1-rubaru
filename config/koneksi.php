@@ -13,7 +13,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     $host = "localhost";
     $user = "u860157627_usr_zzZltosJ";
     $password = 'Smpn1rubaru@21';
-    $database = "u860157627_db_zzzzz";
+    $database = "u860157627_db_zzZltosJ";
 }
 
 $conn = mysqli_connect($host, $user, $password, $database);
