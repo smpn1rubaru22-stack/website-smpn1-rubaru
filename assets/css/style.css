@@ -2872,64 +2872,48 @@ GARIS PEMBATAS
 
 }
 
+
 /*=========================
-RESPONSIVE
+RESPONSIVE FOOTER
 =========================*/
 
 @media(max-width:991px){
 
-.footer{
+    .footer{
+        text-align:center;
+    }
 
-    text-align:center;
+    .footer-line{
+        margin:0 auto 25px;
+    }
 
-}
+    .footer-item{
+        justify-content:center;
+    }
 
-.footer-line{
+    .footer-social{
+        justify-content:center;
+    }
 
-    margin:0 auto 25px;
+    .footer-logo{
+        margin:auto auto 20px;
+    }
 
-}
-
-.footer-item{
-
-    justify-content:center;
-
-}
-
-.footer-social{
-
-    justify-content:center;
-
-}
-
-.footer-logo{
-
-    margin:auto auto 20px;
+    .footer-map{
+        margin-top:20px;
+    }
 
 }
 
-.footer-map{
-
-    margin-top:20px;
-
-}
-
-}
 
 /* ==================================================
-   TAMPILAN HP
-   HEADER LEBIH PENDEK & LANDSCAPE
+   TAMPILAN TABLET & HP
 ================================================== */
 
-.navbar-brand img{
-    width:48px !important;
-    height:48px !important;
-    object-fit:contain;
-    margin-right:0 !important;
-}
+@media(max-width:768px){
 
     /* =========================
-       HEADER / NAVBAR
+       NAVBAR
     ========================= */
 
     .custom-navbar{
@@ -2937,14 +2921,7 @@ RESPONSIVE
         min-height:72px;
     }
 
-    /* Logo sekolah */
-    .navbar-brand img{
-        width:48px !important;
-        height:48px !important;
-        object-fit:contain;
-    }
 
-    /* Area nama sekolah */
     .navbar-brand{
         display:flex;
         align-items:center;
@@ -2953,7 +2930,13 @@ RESPONSIVE
         margin:0 !important;
     }
 
-    /* Nama SMP */
+    .navbar-brand img{
+        width:48px !important;
+        height:48px !important;
+        object-fit:contain;
+        margin-right:0 !important;
+    }
+
     .navbar-brand h6{
         font-size:14px !important;
         font-weight:600 !important;
@@ -2961,7 +2944,7 @@ RESPONSIVE
         margin:0 !important;
     }
 
-    /* Kabupaten Sumenep */
+
     .navbar-brand small{
         display:block;
         font-size:10px !important;
@@ -2969,7 +2952,7 @@ RESPONSIVE
         margin-top:2px;
     }
 
-    /* Tombol hamburger */
+
     .navbar-toggler{
         padding:6px 8px !important;
         border-radius:8px !important;
@@ -2982,7 +2965,7 @@ RESPONSIVE
 
 
     /* =========================
-       MENU SAAT HAMBURGER DIBUKA
+       MENU NAVBAR
     ========================= */
 
     .navbar-nav{
@@ -3018,7 +3001,7 @@ RESPONSIVE
 
 
     /* =========================
-       SOCIAL MEDIA
+       SOCIAL MEDIA NAVBAR
     ========================= */
 
     .navbar .fa-instagram,
@@ -3061,12 +3044,244 @@ RESPONSIVE
     }
 
 
+    /* =========================
+       BERITA
+    ========================= */
+
+    .berita-utama{
+        height:250px;
+    }
+
+    .card-body{
+        padding:20px;
+    }
+
+    .card-body h3{
+        font-size:24px;
+    }
+
+    .berita-item{
+        flex-direction:column;
+    }
+
+    .berita-img{
+        width:100%;
+    }
+
+    .berita-img img{
+        height:220px;
+    }
+
+    .judul-berita{
+        font-size:22px;
+    }
+
+
+    /* =========================
+       FASILITAS
+    ========================= */
+
+    .fasilitas-header{
+        padding:60px 0;
+        text-align:center;
+    }
+
+    .fasilitas-header h1{
+        font-size:36px;
+    }
+
+    .fasilitas-header p{
+        font-size:16px;
+        line-height:30px;
+        text-align:center;
+    }
+
+    .fasilitas-cover{
+        height:250px;
+        margin-bottom:35px;
+    }
+
+    .fasilitas-list h2{
+        font-size:30px;
+    }
+
+
+    /* =========================
+       PELAYANAN
+    ========================= */
+
+    .pelayanan-header{
+        padding:60px 0;
+        text-align:center;
+    }
+
+    .pelayanan-header h1{
+        font-size:35px;
+    }
+
+    .pelayanan-header p{
+        font-size:16px;
+        line-height:30px;
+        text-align:center;
+    }
+
+    .pelayanan-cover{
+        height:300px;
+        margin-bottom:30px;
+    }
+
+
+    /* =========================
+       DETAIL LAYANAN
+    ========================= */
+
+    .detail-layanan-page{
+        padding:20px 10px;
+    }
+
+    .detail-card{
+        width:95%;
+        padding:22px;
+    }
+
+    .detail-header h1{
+        font-size:26px;
+    }
+
+    .detail-header p{
+        font-size:14px;
+    }
+
+    .layanan-section h3{
+        font-size:18px;
+    }
+
+    .layanan-section li{
+        font-size:14px;
+    }
+
+    .layanan-box h4,
+    .info-box strong{
+        font-size:16px;
+    }
+
+    .layanan-box p,
+    .info-box p{
+        font-size:14px;
+    }
+
+    .btn-kembali{
+        width:100%;
+        text-align:center;
+    }
+
+
+    /* =========================
+       PENGADUAN
+    ========================= */
+
+    .layanan-detail{
+        margin:30px 15px;
+        padding:30px 20px;
+    }
+
+    .layanan-detail h1{
+        font-size:28px;
+    }
+
+    .qr-pengaduan{
+        padding:25px 15px;
+    }
+
+    .gambar-qr{
+        width:200px;
+        height:200px;
+    }
+
+    .alur-box{
+        grid-template-columns:1fr;
+    }
+
+    .alur-item{
+        padding:25px;
+    }
+
+
+    /* =========================
+       KONTAK
+    ========================= */
+
+    .hero-kontak{
+        padding:80px 20px 35px;
+        text-align:center;
+    }
+
+    .hero-kontak h1{
+        font-size:28px;
+    }
+
+    .kontak-section{
+        width:90%;
+        grid-template-columns:1fr;
+        gap:30px;
+        margin:40px auto;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer{
+        text-align:center;
+    }
+
+    .footer-item{
+        justify-content:center;
+    }
+
+    .footer-social{
+        justify-content:center;
+    }
+
+    .footer-logo{
+        margin:auto auto 20px;
+    }
+
+    .footer-map{
+        margin-top:20px;
+    }
+
+
+    /* =========================
+       DETAIL BERITA
+    ========================= */
+
+    .detail-gambar-tengah{
+        width:100%;
+        max-width:100%;
+        height:auto;
+        margin:20px auto 25px;
+        border-radius:10px;
+    }
+
+    .detail-isi{
+        font-size:15px;
+        line-height:1.8;
+    }
+
+    .detail-isi p{
+        margin-bottom:18px;
+    }
+
+}
+
 
 /* ==================================================
    HP SANGAT KECIL
 ================================================== */
 
-@media (max-width:480px){
+@media(max-width:480px){
 
     .custom-navbar{
         min-height:68px;
@@ -3100,7 +3315,7 @@ RESPONSIVE
     }
 
 
-    /* Slider lebih landscape */
+    
     .slider-img{
         height:340px !important;
     }
@@ -3122,55 +3337,12 @@ RESPONSIVE
         padding:8px 22px !important;
     }
 
-}
-
-/* ==================================================
-   GAMBAR DI DALAM ISI DETAIL BERITA
-================================================== */
-
-.detail-gambar-tengah{
-    display:block;
-    width:100%;
-    max-width:750px;
-    height:auto;
-    margin:25px auto 30px;
-    border-radius:12px;
-    object-fit:cover;
-}
-
-/* Isi berita */
-
-.detail-isi{
-    font-size:16px;
-    line-height:1.9;
-    color:#444;
-}
-
-.detail-isi p{
-    margin-bottom:20px;
-}
-
-/* =========================
-   TAMPILAN HP
-========================= */
-
-@media(max-width:768px){
-
-    .detail-gambar-tengah{
-        width:100%;
-        max-width:100%;
-        height:auto;
-        margin:20px auto 25px;
-        border-radius:10px;
+    .berita-img img{
+        height:200px;
     }
 
-    .detail-isi{
-        font-size:15px;
-        line-height:1.8;
-    }
-
-    .detail-isi p{
-        margin-bottom:18px;
+    .judul-berita{
+        font-size:19px;
     }
 
 }
