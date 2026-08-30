@@ -894,7 +894,7 @@ HEADER FASILITAS
 
 .fasilitas-header{
 
-    padding:120px 0 60px;
+    padding:60px 0 60px;
 
     background:#ffffff;
 
@@ -3087,117 +3087,256 @@ RESPONSIVE FOOTER
     .judul-berita{
         font-size:22px;
     }
-
-/* =========================
-   FASILITAS
-========================= */
-
-.fasilitas-header{
-    padding:100px 15px 60px !important;
-    text-align:center;
 }
+/* ==================================================
+   FIX MOBILE FASILITAS & PELAYANAN
+================================================== */
 
-.fasilitas-header h1{
-    font-size:36px;
-}
+@media (max-width: 768px){
 
-.fasilitas-header p{
-    font-size:16px;
-    line-height:30px;
-    text-align:center;
-}
-
-.fasilitas-cover{
-    height:250px;
-    margin-bottom:35px;
-}
-
-.fasilitas-list h2{
-    font-size:30px;
-}
-
-   /* =========================
-   PELAYANAN
-========================= */
-
-.pelayanan-header{
-    padding:100px 15px 60px !important;
-    text-align:center;
-}
-
-.pelayanan-header h1{
-    font-size:35px;
-}
-
-.pelayanan-header p{
-    font-size:16px;
-    line-height:30px;
-    text-align:center;
-}
-
-.pelayanan-cover{
-    height:300px;
-    margin-bottom:30px;
-}
-
-.standar-pelayanan{
-    padding:50px 15px;
-}
-
-.standar-pelayanan h2{
-    font-size:30px;
-}
-
-.service-box{
-    padding:25px 20px;
-}
-
-.layanan-card{
-    padding:25px 20px;
-}
     /* =========================
-       DETAIL LAYANAN
+       FASILITAS
     ========================= */
 
-    .detail-layanan-page{
-        padding:20px 10px;
+    .fasilitas-header{
+        padding:0px 15px 40px !important;
+        text-align:center !important;
     }
 
-    .detail-card{
-        width:95%;
-        padding:22px;
+    .fasilitas-header .container{
+        width:100% !important;
+        max-width:100% !important;
+        padding:0 !important;
     }
 
-    .detail-header h1{
-        font-size:26px;
+    .fasilitas-header .row{
+        margin:0 !important;
     }
 
-    .detail-header p{
-        font-size:14px;
+    .fasilitas-header .col-lg-6{
+        width:100% !important;
+        padding-left:0 !important;
+        padding-right:0 !important;
     }
 
-    .layanan-section h3{
-        font-size:18px;
+    .fasilitas-cover{
+        width:100% !important;
+        height:230px !important;
+        margin:0 0 30px 0 !important;
+        border-radius:15px !important;
+        object-fit:cover !important;
     }
 
-    .layanan-section li{
-        font-size:14px;
+    .judul-fasilitas{
+        font-size:14px !important;
+        letter-spacing:3px !important;
     }
 
-    .layanan-box h4,
-    .info-box strong{
-        font-size:16px;
+    .fasilitas-header h1{
+        font-size:30px !important;
+        line-height:1.3 !important;
+        margin-bottom:15px !important;
     }
 
-    .layanan-box p,
-    .info-box p{
-        font-size:14px;
+    .fasilitas-header p{
+        font-size:15px !important;
+        line-height:1.7 !important;
+        text-align:center !important;
+        margin-bottom:25px !important;
     }
 
-    .btn-kembali{
-        width:100%;
-        text-align:center;
+    .fasilitas-header .btn{
+        width:100% !important;
+        font-size:15px !important;
+        padding:12px 20px !important;
     }
+
+
+    /* DAFTAR FASILITAS */
+
+    .fasilitas-list{
+        padding:50px 15px !important;
+    }
+
+    .fasilitas-list .container{
+        width:100% !important;
+        max-width:100% !important;
+        padding:0 !important;
+    }
+
+    .fasilitas-list h2{
+        font-size:28px !important;
+    }
+
+    .fasilitas-list > .container > .row{
+        margin-left:0 !important;
+        margin-right:0 !important;
+    }
+
+    .fasilitas-list .col-lg-3{
+        width:100% !important;
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+
+    .fasilitas-card{
+        width:100% !important;
+    }
+
+    .fasilitas-card img{
+        width:100% !important;
+        height:210px !important;
+        object-fit:cover !important;
+    }
+
+    .fasilitas-card h5{
+        font-size:18px !important;
+    }
+
+    .fasilitas-card p{
+        font-size:14px !important;
+        line-height:1.7 !important;
+    }
+
+
+    /* =========================
+       PELAYANAN
+    ========================= */
+
+    .pelayanan-header{
+        padding:90px 15px 40px !important;
+        text-align:center !important;
+    }
+
+    .pelayanan-header .container{
+        width:100% !important;
+        max-width:100% !important;
+        padding:0 !important;
+    }
+
+    .pelayanan-header .row{
+        margin:0 !important;
+    }
+
+    .pelayanan-header .col-lg-6{
+        width:100% !important;
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+
+    .pelayanan-cover{
+        width:100% !important;
+        height:230px !important;
+        margin:0 0 30px 0 !important;
+        border-radius:15px !important;
+        object-fit:cover !important;
+    }
+
+    .judul-pelayanan{
+        font-size:14px !important;
+        letter-spacing:3px !important;
+    }
+
+    .pelayanan-header h1{
+        font-size:30px !important;
+        line-height:1.3 !important;
+        margin-bottom:15px !important;
+    }
+
+    .pelayanan-header p{
+        font-size:15px !important;
+        line-height:1.7 !important;
+        text-align:center !important;
+        margin-bottom:25px !important;
+    }
+
+    .pelayanan-header .btn{
+        width:100% !important;
+        font-size:15px !important;
+        padding:12px 20px !important;
+    }
+
+
+    /* =========================
+       STANDAR PELAYANAN
+    ========================= */
+
+    .standar-pelayanan{
+        padding:50px 15px !important;
+    }
+
+    .standar-pelayanan .container{
+        width:100% !important;
+        max-width:100% !important;
+        padding:0 !important;
+    }
+
+    .standar-pelayanan h2{
+        font-size:28px !important;
+    }
+
+    .service-box{
+        padding:25px 18px !important;
+    }
+
+    .service-box h4{
+        font-size:18px !important;
+    }
+
+    .service-box p{
+        font-size:14px !important;
+        line-height:1.7 !important;
+    }
+
+    .layanan-card{
+        padding:25px 18px !important;
+    }
+
+    .layanan-card h5{
+        font-size:18px !important;
+    }
+
+    .layanan-card p{
+        font-size:14px !important;
+        line-height:1.7 !important;
+    }
+
+}
+
+
+/* ==================================================
+   HP SANGAT KECIL
+================================================== */
+
+@media (max-width:480px){
+
+    .fasilitas-header,
+    .pelayanan-header{
+        padding:80px 12px 35px !important;
+    }
+
+    .fasilitas-cover,
+    .pelayanan-cover{
+        height:200px !important;
+    }
+
+    .fasilitas-header h1,
+    .pelayanan-header h1{
+        font-size:26px !important;
+    }
+
+    .fasilitas-header p,
+    .pelayanan-header p{
+        font-size:14px !important;
+        line-height:1.7 !important;
+    }
+
+    .fasilitas-list,
+    .standar-pelayanan{
+        padding:40px 12px !important;
+    }
+
+}
 
 
     /* =========================
@@ -3297,8 +3436,6 @@ RESPONSIVE FOOTER
     .detail-isi p{
         margin-bottom:18px;
     }
-
-}
 
 
 /* ==================================================
