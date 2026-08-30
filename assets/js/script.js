@@ -87,8 +87,9 @@ if(btnPelayanan && standarPelayanan){
 }
 
 /* =========================================================
-   SLIDER GURU OTOMATIS + GESER JARI
-   ========================================================= */
+   SLIDER GURU
+   AUTO SLIDE + GESER JARI DI HP
+========================================================= */
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -97,14 +98,23 @@ document.addEventListener("DOMContentLoaded", function(){
     if(!slider) return;
 
     let autoScroll;
+    let sedangDisentuh = false;
+
+    /* =========================
+       AUTO SLIDER
+    ========================= */
 
     function mulaiSlider(){
 
+        clearInterval(autoScroll);
+
         autoScroll = setInterval(function(){
+
+            if(sedangDisentuh) return;
 
             slider.scrollLeft += 1;
 
-            if(slider.scrollLeft + slider.clientWidth >= slider.scrollWidth){
+            if(slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 2){
 
                 slider.scrollLeft = 0;
 
@@ -120,20 +130,40 @@ document.addEventListener("DOMContentLoaded", function(){
 
     }
 
-    mulaiSlider();
 
-    /* Berhenti sementara ketika disentuh */
+    /* =========================
+       SENTUH HP
+    ========================= */
+
+
     slider.addEventListener("touchstart", function(){
-        berhentiSlider();
-    });
 
-    /* Jalankan lagi setelah jari dilepas */
+        sedangDisentuh = true;
+
+        berhentiSlider();
+
+    }, {passive:true});
+
+
+
+
     slider.addEventListener("touchend", function(){
 
-        setTimeout(function(){
-            mulaiSlider();
-        }, 1000);
+        sedangDisentuh = false;
 
-    });
+        setTimeout(function(){
+
+            mulaiSlider();
+
+        }, 1500);
+
+    }, {passive:true});
+
+
+    /* =========================
+       MULAI
+    ========================= */
+
+    mulaiSlider();
 
 });

@@ -694,44 +694,33 @@ section h2::after{
     width:100%;
     overflow-x:auto;
     overflow-y:hidden;
-    position:relative;
-
-    scrollbar-width:none;
-    -ms-overflow-style:none;
-
+    
     -webkit-overflow-scrolling:touch;
 
-    cursor:grab;
+    scrollbar-width:none;
 }
 
 .guru-slider::-webkit-scrollbar{
     display:none;
 }
 
-.guru-slider:active{
-    cursor:grabbing;
-}
+
 
 .guru-track{
-  
+ 
     display:flex;
-    gap:25px;
+    flex-wrap:nowrap;
     width:max-content;
+    gap:25px;
     padding:10px 5px 20px;
 }
 
 .guru-card{
     width:230px;
+    min-width:230px;
     flex:0 0 230px;
-
-    background:#fff;
-    border-radius:18px;
-    overflow:hidden;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
-
-    transition:.3s;
 }
+
 
 .guru-card:hover{
     transform:translateY(-8px);
@@ -770,28 +759,35 @@ section h2::after{
 
 @media(max-width:768px){
 
-    .guru-section{
-        overflow:hidden;
-    }
-
+    
     .guru-slider{
         width:100%;
         overflow-x:auto;
         overflow-y:hidden;
 
-        padding:0;
+        -webkit-overflow-scrolling:touch;
+
+        scrollbar-width:none;
 
         touch-action:pan-x;
-        cursor:grab;
+    }
+
+    .guru-slider::-webkit-scrollbar{
+        display:none;
     }
 
     .guru-track{
+        display:flex;
+        flex-wrap:nowrap;
+        width:max-content;
+
         gap:15px;
         padding:10px 15px 20px;
     }
 
     .guru-card{
         width:200px;
+        min-width:200px;
         flex:0 0 200px;
     }
 
