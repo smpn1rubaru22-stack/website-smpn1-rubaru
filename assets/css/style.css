@@ -2543,31 +2543,36 @@ PDF VIEWER dokymen standar pelayanan
 
     color:#fff;
 
-    padding:70px 0;
+    padding:80px 10% 30px;
 
-    margin-bottom: 45px;
-    
+    margin-bottom:45px;
+
     text-align:center;
 
 }
 
 .header-berita h1{
 
-    font-size:38px;
+    font-size:32px;
+
+    margin:0 0 8px;
 
     font-weight:700;
 
-    margin-bottom:8px;
+    
 
 }
 
+
 .header-berita p{
+
+    font-size:15px;
 
     margin:0;
 
     opacity:.9;
 
-    font-size:17px;
+
 
 }
 
