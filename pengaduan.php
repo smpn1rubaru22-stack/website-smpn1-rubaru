@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Profil | SMP Negeri 1 Rubaru</title>
+    <title>Pengaduan | SMP Negeri 1 Rubaru</title>
     <link rel="icon" type="image/png" href="upload/logo/logo.png?v=1">
 
     <!-- Bootstrap -->
@@ -21,7 +21,7 @@
         rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css?v=3">
+    <link rel="stylesheet" href="assets/css/style.css?v=4">
 
 </head>
 <body>
