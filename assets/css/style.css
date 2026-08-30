@@ -1,6 +1,12 @@
-/* ===========================
-   STYLE WEBSITE SMPN 1 RUBARU
-=========================== */
+
+/* =========================================================
+   STYLE WEBSITE SMP NEGERI 1 RUBARU
+   ========================================================= */
+
+
+/* =========================================================
+   1. RESET & DASAR
+   ========================================================= */
 
 *{
     margin:0;
@@ -18,16 +24,16 @@ body{
     color:#333;
 }
 
-/*======================================
-NAVBAR
-======================================*/
+/* =========================================================
+   2. NAVBAR
+   ========================================================= */
 
 .custom-navbar{
 
     background:rgba(11,59,99,.90);
-
+    
     backdrop-filter:blur(12px);
-
+    
     transition:.4s;
 
 }
@@ -86,16 +92,45 @@ NAVBAR
 
 }
 
+
 .navbar-nav .nav-link:hover::after{
 
     width:100%;
 
 }
-/*======================================
-DROPDOWN
-======================================*/
 
-.dropdown-menu{
+.navbar .nav-link{
+    color:#fff;
+    transition:.3s;
+}
+
+.navbar .nav-link:hover{
+    color:#ffc107;
+}
+
+.navbar .nav-link.active{
+    color:#ffc107 !important;
+    font-weight:700;
+    position:relative;
+}
+
+.navbar .nav-link.active::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:100%;
+    height:3px;
+    background:#ffc107;
+    border-radius:10px;
+}
+
+
+/* =========================================================
+   3. DROPDOWN
+   ========================================================= */
+
+   .dropdown-menu{
 
     border:none;
 
@@ -142,9 +177,7 @@ DROPDOWN
     color:#fff;
 
 }
-/*=========================
-DROPDOWN PELAYANAN
-=========================*/
+
 
 .dropdown-toggle-custom{
 
@@ -158,7 +191,7 @@ DROPDOWN PELAYANAN
 }
 
 .dropdown-toggle-custom i{
-
+  
     font-size:12px;
     margin-left:6px;
     transition:.3s;
@@ -171,42 +204,43 @@ DROPDOWN PELAYANAN
 
 }
 
-/* panah berputar saat menu terbuka */
+
 
 .dropdown.show .dropdown-toggle-custom i{
+
 
     transform:rotate(180deg);
 
 }
 
-/* Bootstrap 5 */
+
 
 .show > .dropdown-toggle-custom i{
 
     transform:rotate(180deg);
 
 }
+
 @media (min-width:992px){
 
-.dropdown:hover .dropdown-menu{
-
-display:block;
-
-margin-top:0;
-
-}
+    .dropdown:hover .dropdown-menu{
+        display:block;
+        margin-top:0;
+    }
 
 }
 
-/* ===========================
-   SOCIAL ICON
-=========================== */
+
+/* =========================================================
+   4. SOCIAL ICON NAVBAR
+   ========================================================= */
 
 .navbar .fa-instagram,
 .navbar .fa-youtube,
 .navbar .fa-tiktok{
 
     font-size:22px;
+
     transition:.3s;
 
 }
@@ -229,9 +263,9 @@ margin-top:0;
 
 }
 
-/* ===========================
-   SLIDER
-=========================== */
+/* =========================================================
+   5. SLIDER
+   ========================================================= */
 
 .slider-img{
 
@@ -277,9 +311,9 @@ margin-top:0;
 
 }
 
-/* ===========================
-   SECTION TITLE
-=========================== */
+/* =========================================================
+   6. SECTION TITLE
+   ========================================================= */
 
 section h2{
 
@@ -308,10 +342,9 @@ section h2::after{
 }
 
 
-
-/* ==================================================
-   CARD BERITA
-================================================== */
+/* =========================================================
+   7. CARD UMUM
+   ========================================================= */
 
 .card{
     border:none;
@@ -327,11 +360,9 @@ section h2::after{
 }
 
 
-
-
-/* ==================================================
-   BERITA UTAMA
-================================================== */
+/* =========================================================
+   8. BERITA UTAMA
+   ========================================================= */
 
 .berita-utama{
 
@@ -346,6 +377,7 @@ section h2::after{
     display:block;
 
 }
+
 
 .card-body{
 
@@ -386,9 +418,9 @@ section h2::after{
 }
 
 
-/* ==================================================
-   BERITA KECIL
-================================================== */
+/* =========================================================
+   9. BERITA KECIL
+   ========================================================= */
 
 .berita-kecil{
 
@@ -409,6 +441,7 @@ section h2::after{
     align-items:flex-start;
 
 }
+
 
 .berita-kecil:hover{
 
@@ -471,51 +504,10 @@ section h2::after{
 }
 
 
-/* ==================================================
-   RESPONSIVE
-================================================== */
 
-@media(max-width:992px){
-
-    .berita-utama{
-
-        height:360px;
-
-    }
-
-    .card-body h3{
-
-        font-size:28px;
-
-    }
-
-}
-
-@media(max-width:768px){
-
-    .berita-utama{
-
-        height:250px;
-
-    }
-
-    .card-body{
-
-        padding:20px;
-
-    }
-
-    .card-body h3{
-
-        font-size:24px;
-
-    }
-
-}
-
-/*==================================
-  HEADER PROFIL
-==================================*/
+/* =========================================================
+   10. HEADER PROFIL
+   ========================================================= */
 
 .profil-header{
     padding:60px 0;
@@ -538,21 +530,26 @@ section h2::after{
 }
 
 .profil-deskripsi{
-    font-size: 16px;
-    line-height: 1.8;
-    color: #555;
-    margin-top: 20px;
-    padding-left: 10px;
+    font-size:16px;
+    line-height:1.8;
+    color:#555;
+    margin-top:20px;
+    padding-left:10px;
 }
-/*==================================
-  KEPALA SEKOLAH
-==================================*/
+
+
+/* =========================================================
+   11. KEPALA SEKOLAH
+   ========================================================= */
 
 .kepala-sekolah{
 
     background:#ffffff;
+
     padding:18px;
+
     border-radius:15px;
+
     box-shadow:0 5px 15px rgba(0,0,0,.1);
 
 }
@@ -560,12 +557,16 @@ section h2::after{
 .kepala-sekolah p{
 
     color:#555;
+
     font-size:17px;
 
 }
-/*==================================
-VISI & MISI
-==================================*/
+
+
+
+/* =========================================================
+   12. VISI & MISI
+   ========================================================= */
 
 .visi-misi{
 
@@ -646,11 +647,12 @@ VISI & MISI
     left:0;
     color:#0d6efd;
     font-weight:bold;
-
 }
-/*====================================
-ANIMASI TAMPIL
-====================================*/
+
+
+/* =========================================================
+   13. ANIMASI PROFIL
+   ========================================================= */
 
 .profil-hidden{
     display:none;
@@ -674,9 +676,12 @@ ANIMASI TAMPIL
     }
 
 }
-/*==================================
-GURU & TENAGA KEPENDIDIKAN
-==================================*/
+
+
+
+/* =========================================================
+   14. GURU & TENAGA KEPENDIDIKAN
+   ========================================================= */
 
 .guru-section{
 
@@ -701,6 +706,7 @@ GURU & TENAGA KEPENDIDIKAN
     animation:sliderGuru 60s linear infinite;
 
 }
+
 
 .guru-slider:hover .guru-track{
 
@@ -727,6 +733,7 @@ GURU & TENAGA KEPENDIDIKAN
 .guru-card{
 
     width:230px;
+
     flex-shrink:0;
 
     background:#ffffff;
@@ -752,7 +759,7 @@ GURU & TENAGA KEPENDIDIKAN
     width:100%;
     height:280px;
     object-fit:cover;
-
+   
     transition:.4s;
 
 }
@@ -778,22 +785,22 @@ GURU & TENAGA KEPENDIDIKAN
     text-align:center;
     color:#666;
     margin-bottom:20px;
-
 }
 
-/* ===========================
-   STRUKTUR ORGANISASI
-=========================== */
+
+/* =========================================================
+   15. STRUKTUR ORGANISASI
+   ========================================================= */
 
 .struktur-section{
     padding:80px 0;
 }
 
 .struktur-img{
-    width: 220px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    width:220px;
+    height:auto;
+    display:block;
+    margin:0 auto;
 }
 
 .section-line{
@@ -803,9 +810,13 @@ GURU & TENAGA KEPENDIDIKAN
     margin:15px auto;
     border-radius:20px;
 }
-/*==============================
-HEADER HALAMAN
-==============================*/
+
+
+
+
+/* =========================================================
+   16. HEADER HALAMAN
+   ========================================================= */
 
 .page-header{
 
@@ -879,22 +890,14 @@ HEADER HALAMAN
     margin:0 5px;
 
 }
-/*====================================================
-HALAMAN FASILITAS SMP NEGERI 1 RUBARU
-====================================================*/
 
-/* Scroll Halus */
-html{
-    scroll-behavior:smooth;
-}
 
-/*====================================================
-HEADER FASILITAS
-====================================================*/
+/* =========================================================
+   17. HALAMAN FASILITAS
+   ========================================================= */
 
 .fasilitas-header{
-
-    padding:60px 0 60px;
+    padding:100px 0;
 
     background:#ffffff;
 
@@ -960,6 +963,7 @@ HEADER FASILITAS
 
     line-height:34px;
 
+
     text-align:justify;
 
     margin-bottom:35px;
@@ -973,6 +977,7 @@ HEADER FASILITAS
     border-radius:50px;
 
     font-size:17px;
+
 
     font-weight:600;
 
@@ -988,34 +993,34 @@ HEADER FASILITAS
 
 }
 
-/*====================================================
-DAFTAR FASILITAS
-====================================================*/
+/* =========================================================
+   18. DAFTAR FASILITAS
+   ========================================================= */
 
 .fasilitas-list{
-
+ 
     background:#f7f9fc;
-
+ 
     padding:80px 0;
-
+ 
     overflow:hidden;
-
+ 
     opacity:0;
-
+ 
     max-height:0;
-
+ 
     transform:translateY(-40px);
-
+ 
     transition:all .8s ease;
 
 }
 
 .fasilitas-list.show{
-
+ 
     opacity:1;
-
+ 
     max-height:9000px;
-
+ 
     transform:translateY(0);
 
 }
@@ -1038,9 +1043,9 @@ DAFTAR FASILITAS
 
 }
 
-/*====================================================
-CARD FASILITAS
-====================================================*/
+/* =========================================================
+   19. CARD FASILITAS
+   ========================================================= */
 
 .fasilitas-card{
 
@@ -1049,6 +1054,7 @@ CARD FASILITAS
     border-radius:18px;
 
     overflow:hidden;
+
 
     box-shadow:0 5px 18px rgba(0,0,0,.08);
 
@@ -1116,116 +1122,14 @@ CARD FASILITAS
 
 }
 
-/*====================================================
-RESPONSIVE
-====================================================*/
 
-@media(max-width:1200px){
-
-.fasilitas-header h1{
-
-font-size:42px;
-
-}
-
-.fasilitas-cover{
-
-height:360px;
-
-}
-
-}
-
-@media(max-width:992px){
-
-.fasilitas-header{
-
-text-align:center;
-
-}
-
-.fasilitas-header p{
-
-text-align:center;
-
-}
-
-.fasilitas-cover{
-
-margin-bottom:35px;
-
-height:320px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.fasilitas-header{
-
-padding:60px 0;
-
-}
-
-.fasilitas-header h1{
-
-font-size:36px;
-
-}
-
-.fasilitas-header p{
-
-font-size:16px;
-
-line-height:30px;
-
-}
-
-.fasilitas-cover{
-
-height:250px;
-
-}
-
-.fasilitas-list h2{
-
-font-size:30px;
-
-}
-
-}
-
-@media(max-width:576px){
-
-.fasilitas-header h1{
-
-font-size:30px;
-
-}
-
-.fasilitas-header p{
-
-font-size:15px;
-
-}
-
-.fasilitas-header .btn{
-
-width:100%;
-
-}
-
-}
-/*====================================================
-HALAMAN STANDAR PELAYANAN
-====================================================*/
-
-/* Header */
+/* =========================================================
+   20. HALAMAN PELAYANAN
+   ========================================================= */
 
 .pelayanan-header{
 
-    padding:140px 0 70px;
+    padding:100px 0 70px;
     background:#ffffff;
 
 }
@@ -1295,9 +1199,9 @@ HALAMAN STANDAR PELAYANAN
 }
 
 
-/*====================================================
-SECTION STANDAR PELAYANAN
-====================================================*/
+/* =========================================================
+   21. STANDAR PELAYANAN
+   ========================================================= */
 
 .standar-pelayanan{
 
@@ -1329,9 +1233,9 @@ SECTION STANDAR PELAYANAN
 }
 
 
-/*====================================================
-SK & MAKLUMAT
-====================================================*/
+/* =========================================================
+   22. SERVICE BOX
+   ========================================================= */
 
 .service-box{
 
@@ -1395,9 +1299,9 @@ SK & MAKLUMAT
 }
 
 
-/*====================================================
-CARD LAYANAN
-====================================================*/
+/* =========================================================
+   23. CARD LAYANAN
+   ========================================================= */
 
 .layanan-card{
 
@@ -1443,7 +1347,7 @@ CARD LAYANAN
     justify-content:center;
 
     margin-bottom:20px;
-
+   
     transition:.4s;
 
 }
@@ -1492,75 +1396,14 @@ CARD LAYANAN
 }
 
 
-/*====================================================
-RESPONSIVE
-====================================================*/
-
-@media(max-width:992px){
-
-.pelayanan-header{
-
-text-align:center;
-
-}
-
-.pelayanan-header p{
-
-text-align:center;
-
-}
-
-.pelayanan-cover{
-
-height:300px;
-margin-bottom:30px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-    .pelayanan-header{
-
-        padding:100px 15px 60px;
-
-        text-align:center;
-
-    }
-
-    .pelayanan-header h1{
-
-        font-size:35px;
-
-    }
-
-    .pelayanan-header p{
-
-        font-size:16px;
-
-        line-height:30px;
-
-        text-align:center;
-
-    }
-
-    .pelayanan-cover{
-
-        height:300px;
-
-        margin-bottom:30px;
-
-    }
-
-}
-/*=====================================
-PDF VIEWER dokymen standar pelayanan
-=====================================*/
+/* =========================================================
+   24. PDF VIEWER
+   ========================================================= */
 
 .pdf-viewer{
 
     width:100%;
+
     height:90vh;
 
     border:none;
@@ -1578,96 +1421,66 @@ PDF VIEWER dokymen standar pelayanan
     padding:10px 22px;
 
 }
-/* ==============================
-   HALAMAN MAKLUMAT PELAYANAN
-============================== */
 
-.maklumat-container {
-    min-height: 100vh;
-    width: 100%;
-    background: #f5f8fc;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* =========================================================
+   25. MAKLUMAT PELAYANAN
+   ========================================================= */
 
-    padding: 40px 20px;
-    box-sizing: border-box;
+.maklumat-container{
+    min-height:100vh;
+    width:100%;
+    background:#f5f8fc;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
 }
 
-
-.maklumat-container img {
-
-    width: 420px !important;
-
-    max-width: 90%;
-
-    height: auto;
-
-    display: block;
-
-    margin: 0 auto;
-
-    border-radius: 10px;
-
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-
+.maklumat-container img{
+    width:420px !important;
+    max-width:90%;
+    height:auto;
+    display:block;
+    margin:0 auto;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 
-
-/* tombol download */
-
-.btn-download {
-
-    display: inline-flex !important;
-
-    align-items: center;
-
-    justify-content: center;
-
-    margin-top: 30px;
-
-    padding: 15px 45px;
-
-    background: #0866ff !important;
-
-    color: white !important;
-
-    font-size: 18px;
-
-    font-weight: 600;
-
-    border-radius: 12px;
-
-    text-decoration: none !important;
-
-    box-shadow: 0 8px 18px rgba(0,102,255,0.3);
-
-    transition: .3s;
-
+.btn-download{
+    display:inline-flex !important;
+    align-items:center;
+    justify-content:center;
+    margin-top:30px;
+    padding:15px 45px;
+    background:#0866ff !important;
+    color:white !important;
+    font-size:18px;
+    font-weight:600;
+    border-radius:12px;
+    text-decoration:none !important;
+    box-shadow:0 8px 18px rgba(0,102,255,.3);
+    transition:.3s;
 }
 
-
-.btn-download:hover {
-
+.btn-download:hover{
     background:#004bcc !important;
-
-    transform: translateY(-3px);
-
+    transform:translateY(-3px);
 }
 
-/* =====================================================
-   DETAIL LAYANAN
-===================================================== */
+
+/* =========================================================
+   26. DETAIL LAYANAN
+   ========================================================= */
 
 .detail-layanan-page{
     background:#f4f8fd;
     min-height:100vh;
-    padding:45px 20px;
+     padding:45px 20px;
 }
 
-/* ================= CARD ================= */
+
 
 .detail-card{
     width:75%;
@@ -1679,7 +1492,7 @@ PDF VIEWER dokymen standar pelayanan
     box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
-/* ================= HEADER ================= */
+
 
 .detail-header{
     text-align:center;
@@ -1709,7 +1522,7 @@ PDF VIEWER dokymen standar pelayanan
     text-align:justify;
 }
 
-/* ================= SECTION ================= */
+
 
 .layanan-section{
     margin-bottom:25px;
@@ -1743,7 +1556,7 @@ PDF VIEWER dokymen standar pelayanan
     font-weight:bold;
 }
 
-/* ================= BOX INFORMASI ================= */
+
 
 .layanan-box,
 .info-box{
@@ -1763,6 +1576,7 @@ PDF VIEWER dokymen standar pelayanan
 }
 
 .layanan-box:hover,
+
 .info-box:hover{
 
     transform:translateY(-2px);
@@ -1772,6 +1586,7 @@ PDF VIEWER dokymen standar pelayanan
 }
 
 .layanan-box h4,
+
 .info-box strong{
 
     display:flex;
@@ -1799,140 +1614,24 @@ PDF VIEWER dokymen standar pelayanan
 
     color:#444;
 
+
     margin:0;
 
     text-align:justify;
-
-}
-
-/* ================= TOMBOL ================= */
-
-.btn-kembali{
-
-    display:inline-block;
-
-    margin-top:25px;
-
-    padding:12px 28px;
-
-    background:#0d6efd;
-
-    color:#fff !important;
-
-    text-decoration:none;
-
-    border-radius:8px;
-
-    font-size:15px;
-
-    font-weight:600;
-
-    transition:.3s;
-
-}
-
-.btn-kembali:hover{
-
-    background:#084298;
-
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:992px){
-
-.detail-card{
-
-    width:90%;
-    padding:30px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.detail-layanan-page{
-
-    padding:20px 10px;
-
-}
-
-.detail-card{
-
-    width:95%;
-    padding:22px;
-
-}
-
-.detail-header h1{
-
-    font-size:26px;
-
-}
-
-.detail-header p{
-
-    font-size:14px;
-
-}
-
-.layanan-section h3{
-
-    font-size:18px;
-
-}
-
-.layanan-section li{
-
-    font-size:14px;
-
-}
-
-.layanan-box h4,
-.info-box strong{
-
-    font-size:16px;
-
-}
-
-.layanan-box p,
-.info-box p{
-
-    font-size:14px;
-
-}
-
-.btn-kembali{
-
-    width:100%;
-    text-align:center;
-
-}
-
 }
 
 
-/* ==================================
-   QR CODE SECTION
-================================== */
-
+/* =========================================================
+   27. QR PENGADUAN
+   ========================================================= */
 
 .qr-pengaduan{
-
-    text-align: center;
-
-    background: #f5f9ff;
-
-    padding: 35px;
-
-    border-radius: 20px;
-
-    margin-top: 30px;
-
+    text-align:center;
+    background:#f5f9ff;
+    padding:35px;
+    border-radius:20px;
+    margin-top:30px;
 }
-
-
 
 .qr-pengaduan h2{
 
@@ -1973,67 +1672,53 @@ PDF VIEWER dokymen standar pelayanan
     margin:25px auto;
 
     display:block;
-
-    box-shadow:
-
-    0 8px 25px rgba(0,0,0,.12);
-
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
 }
-
-
-
-
-
-/* TOMBOL FORM */
-
 
 .btn-pengaduan{
 
     display:inline-block;
-
+ 
     background:#0866ff;
-
+ 
     color:white !important;
-
+ 
     padding:15px 45px;
-
+ 
     border-radius:30px;
-
+ 
     font-weight:600;
-
+ 
     text-decoration:none;
-
+ 
     font-size:16px;
-
+ 
     transition:.3s;
 
-}
+ }
+
+
 
 
 
 .btn-pengaduan:hover{
-
+ 
     background:#004dcc;
-
+ 
     transform:translateY(-3px);
-
 }
 
 
-
-
-
-
-/* ==================================
-   ALUR PENGADUAN
-================================== */
-
+/* =========================================================
+   28. ALUR PENGADUAN
+   ========================================================= */
 
 .alur-pengaduan{
-
+ 
     margin-top:55px;
 
 }
+
 
 
 
@@ -2068,17 +1753,17 @@ PDF VIEWER dokymen standar pelayanan
 
 
 .alur-item{
-
+ 
     background:#f7faff;
-
+ 
     border-radius:18px;
-
+ 
     padding:25px 15px;
 
     text-align:center;
-
+ 
     border:1px solid #e6efff;
-
+ 
     transition:.3s;
 
 }
@@ -2152,13 +1837,9 @@ PDF VIEWER dokymen standar pelayanan
 }
 
 
-
-
-
-/* ==================================
-   KOMITMEN PELAYANAN
-================================== */
-
+/* =========================================================
+   29. KOMITMEN PELAYANAN
+   ========================================================= */
 
 .komitmen-pelayanan{
 
@@ -2186,6 +1867,7 @@ PDF VIEWER dokymen standar pelayanan
 
 
 
+
 .komitmen-pelayanan p{
 
     color:#555;
@@ -2195,14 +1877,9 @@ PDF VIEWER dokymen standar pelayanan
 }
 
 
-
-
-
-
-/* ==================================
-   TOMBOL KEMBALI
-================================== */
-
+/* =========================================================
+   30. TOMBOL KEMBALI
+   ========================================================= */
 
 .btn-kembali{
 
@@ -2218,6 +1895,7 @@ PDF VIEWER dokymen standar pelayanan
 
     color:white !important;
 
+
     border-radius:30px;
 
     text-decoration:none;
@@ -2230,6 +1908,7 @@ PDF VIEWER dokymen standar pelayanan
 
 
 
+
 .btn-kembali:hover{
 
     background:#002952;
@@ -2237,78 +1916,9 @@ PDF VIEWER dokymen standar pelayanan
 }
 
 
-
-
-
-/* ==================================
-   RESPONSIVE MOBILE
-================================== */
-
-
-@media(max-width:768px){
-
-
-.layanan-detail{
-
-    margin:30px 15px;
-
-    padding:30px 20px;
-
-}
-
-
-
-.layanan-detail h1{
-
-    font-size:28px;
-
-}
-
-
-
-.qr-pengaduan{
-
-    padding:25px 15px;
-
-}
-
-
-
-.gambar-qr{
-
-    width:200px;
-
-    height:200px;
-
-}
-
-
-
-.alur-box{
-
-    grid-template-columns:1fr;
-
-}
-
-
-
-.alur-item{
-
-    padding:25px;
-
-}
-
-
-}
-/* ==================================================
-   HALAMAN KONTAK
-   SMP NEGERI 1 RUBARU
-================================================== */
-
-
-/* =====================
-   HEADER KONTAK
-===================== */
+/* =========================================================
+   31. HALAMAN KONTAK
+   ========================================================= */
 
 .hero-kontak{
 
@@ -2316,9 +1926,10 @@ PDF VIEWER dokymen standar pelayanan
 
     color:white;
 
-    padding:60px 10% 35px;
+    padding:100px 10% 45px;
 
 }
+
 
 
 .hero-kontak h1{
@@ -2330,6 +1941,7 @@ PDF VIEWER dokymen standar pelayanan
     font-weight:700;
 
 }
+
 
 
 .hero-kontak p{
@@ -2344,9 +1956,7 @@ PDF VIEWER dokymen standar pelayanan
 
 
 
-/* =====================
-   AREA KONTAK
-===================== */
+
 
 
 .kontak-section{
@@ -2369,9 +1979,7 @@ PDF VIEWER dokymen standar pelayanan
 
 
 
-/* =====================
-   INFORMASI KONTAK
-===================== */
+
 
 
 .kontak-item{
@@ -2384,8 +1992,8 @@ PDF VIEWER dokymen standar pelayanan
 
     margin-bottom:28px;
 
-}
 
+}
 
 
 .icon{
@@ -2433,25 +2041,12 @@ PDF VIEWER dokymen standar pelayanan
     font-size:14px;
 
     line-height:1.6;
-
 }
-.hero-kontak{
-    background:#075985;
-    color:white;
-    padding:100px 10% 45px;
-}
-
-
-
-
-/* =====================
-   GOOGLE MAP
-===================== */
-
 
 .maps iframe{
 
     width:100%;
+
 
     height:350px;
 
@@ -2461,15 +2056,8 @@ PDF VIEWER dokymen standar pelayanan
 
     box-shadow:0 10px 25px rgba(0,0,0,.15);
 
+
 }
-
-
-
-
-
-/* =====================
-   MEDIA SOSIAL
-===================== */
 
 
 .judul-sosmed{
@@ -2513,12 +2101,117 @@ PDF VIEWER dokymen standar pelayanan
     color:white;
 
     transform:translateY(-4px);
-
 }
 
-/* ===========================
-   FOOTER SIMPLE
-=========================== */
+
+/* =========================================================
+   32. FOOTER
+   ========================================================= */
+
+.footer{
+    background:#0a3b63;
+    color:#fff;
+    padding:70px 0 25px;
+    margin-top:80px;
+}
+
+.footer .container{
+    max-width:1250px;
+}
+
+.footer h3{
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.footer-line{
+    width:60px;
+    height:4px;
+    background:#ffc107;
+    border-radius:20px;
+    margin-bottom:25px;
+}
+
+.footer-logo{
+    width:95px;
+    height:95px;
+    object-fit:contain;
+    background:#fff;
+    padding:8px;
+    border-radius:50%;
+    margin-bottom:20px;
+}
+
+.footer p{
+    color:#e7e7e7;
+    line-height:34px;
+    font-size:17px;
+}
+
+.footer-item{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+    margin-bottom:22px;
+}
+
+.footer-item i{
+    color:#ffc107;
+    width:22px;
+    font-size:20px;
+    margin-top:5px;
+}
+
+.footer-item span{
+    color:#fff;
+    line-height:30px;
+    font-size:17px;
+}
+
+.footer-social{
+    display:flex;
+    gap:18px;
+    margin-top:10px;
+}
+
+.footer-social a{
+    width:55px;
+    height:55px;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(255,255,255,.12);
+    color:#fff;
+    font-size:24px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-social a:hover{
+    background:#ffc107;
+    color:#0a3b63;
+    transform:translateY(-5px);
+}
+
+.footer-map iframe{
+    width:100%;
+    height:240px;
+    border:none;
+    border-radius:15px;
+}
+
+.footer hr{
+    margin:45px 0 20px;
+    border-color:rgba(255,255,255,.15);
+}
+
+.copyright{
+    text-align:center;
+    color:#ddd;
+    font-size:15px;
+}
 
 .footer-simple{
     background:#0b3b63;
@@ -2534,13 +2227,9 @@ PDF VIEWER dokymen standar pelayanan
 }
 
 
-
-
-
-
-/* =========================
-   HEADER BERITA HP
-========================= */
+/* =========================================================
+   33. HALAMAN BERITA
+   ========================================================= */
 
 .header-berita{
 
@@ -2548,9 +2237,7 @@ PDF VIEWER dokymen standar pelayanan
 
     color:white;
 
-    padding:40 px 0 30px;
-    
-    text-align:center;
+    padding:40px 0 30px;
 
 
 }
@@ -2585,8 +2272,8 @@ PDF VIEWER dokymen standar pelayanan
 }
 
 .berita-list{
-    width:90%;
-    max-width:900px;
+    width:100%;
+    max-width:100%;
     margin:0 auto;
 
 }
@@ -2600,6 +2287,7 @@ PDF VIEWER dokymen standar pelayanan
     border-radius:10px;
     box-shadow:0 2px 8px rgba(0,0,0,.08);
     max-width:100%;
+    transition:.3s;
 }
 
 .berita-item:hover{
@@ -2656,264 +2344,83 @@ PDF VIEWER dokymen standar pelayanan
     color:#084298;
 }
 
-@media(max-width:768px){
 
-.berita-list{
-        width:95%;
-        
-}
+/* =========================================================
+   34. RESPONSIVE TABLET
+   Desktop tetap menggunakan desain utama
+   ========================================================= */
 
-.berita-item{
-    flex-direction:column;
-}
+@media(max-width:1200px){
 
-.berita-img{
-    width:100%;
-}
+    .fasilitas-header h1{
+        font-size:42px;
+    }
 
-.berita-img img{
-    height:220px;
-}
-
-.judul-berita{
-    font-size:22px;
-}
+    .fasilitas-cover{
+        height:360px;
+    }
 
 }
 
-/*====NAVLINK BERITA=====*/
-.navbar .nav-link{
-    color:#fff;
-    transition:.3s;
-}
 
-.navbar .nav-link:hover{
-    color:#ffc107;
-}
+/* =========================================================
+   35. RESPONSIVE TABLET & HP
+   ========================================================= */
 
-.navbar .nav-link.active{
-    color:#ffc107 !important;
-    font-weight:700;
-    position:relative;
-}
+@media(max-width:992px){
 
-.navbar .nav-link.active::after{
-    content:'';
-    position:absolute;
-    left:0;
-    bottom:-8px;
-    width:100%;
-    height:3px;
-    background:#ffc107;
-    border-radius:10px;
-}
+    /* BERITA */
 
-/*==============================
-        FOOTER BARU
-==============================*/
+    .berita-utama{
+        height:360px;
+    }
 
-.footer{
+    .card-body h3{
+        font-size:28px;
+    }
 
-    background:#0a3b63;
 
-    color:#fff;
+    /* FASILITAS */
 
-    padding:70px 0 25px;
+    .fasilitas-header{
+        text-align:center;
+    }
 
-    margin-top:80px;
+    .fasilitas-header p{
+        text-align:center;
+    }
 
-}
+    .fasilitas-cover{
+        margin-bottom:35px;
+        height:320px;
+    }
 
-.footer .container{
 
-    max-width:1250px;
+    /* PELAYANAN */
 
-}
+    .pelayanan-header{
+        text-align:center;
+    }
 
-.footer h3{
+    .pelayanan-header p{
+        text-align:center;
+    }
 
-    font-size:20px;
+    .pelayanan-cover{
+        height:300px;
+        margin-bottom:30px;
+    }
 
-    font-weight:700;
 
-    margin-bottom:10px;
+    /* DETAIL */
 
-}
+    .detail-card{
+        width:90%;
+        padding:30px;
+    }
 
-.footer-line{
 
-    width:60px;
-
-    height:4px;
-
-    background:#ffc107;
-
-    border-radius:20px;
-
-    margin-bottom:25px;
-
-}
-
-.footer-logo{
-
-    width:95px;
-
-    height:95px;
-
-    object-fit:contain;
-
-    background:#fff;
-
-    padding:8px;
-
-    border-radius:50%;
-
-    margin-bottom:20px;
-
-}
-
-.footer p{
-
-    color:#e7e7e7;
-
-    line-height:34px;
-
-    font-size:17px;
-
-}
-
-/*=========================
-KONTAK
-=========================*/
-
-.footer-item{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:15px;
-
-    margin-bottom:22px;
-
-}
-
-.footer-item i{
-
-    color:#ffc107;
-
-    width:22px;
-
-    font-size:20px;
-
-    margin-top:5px;
-
-}
-
-.footer-item span{
-
-    color:#fff;
-
-    line-height:30px;
-
-    font-size:17px;
-
-}
-
-/*=========================
-SOSMED
-=========================*/
-
-.footer-social{
-
-    display:flex;
-
-    gap:18px;
-
-    margin-top:10px;
-
-}
-
-.footer-social a{
-
-    width:55px;
-
-    height:55px;
-
-    border-radius:15px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:rgba(255,255,255,.12);
-
-    color:#fff;
-
-    font-size:24px;
-
-    text-decoration:none;
-
-    transition:.3s;
-
-}
-
-.footer-social a:hover{
-
-    background:#ffc107;
-
-    color:#0a3b63;
-
-    transform:translateY(-5px);
-
-}
-
-/*=========================
-MAP
-=========================*/
-
-.footer-map iframe{
-
-    width:100%;
-
-    height:240px;
-
-    border:none;
-
-    border-radius:15px;
-
-}
-
-/*=========================
-GARIS PEMBATAS
-=========================*/
-
-.footer hr{
-
-    margin:45px 0 20px;
-
-    border-color:rgba(255,255,255,.15);
-
-}
-
-.copyright{
-
-    text-align:center;
-
-    color:#ddd;
-
-    font-size:15px;
-
-}
-
-
-/*=========================
-RESPONSIVE FOOTER
-=========================*/
-
-@media(max-width:991px){
+    /* FOOTER */
 
     .footer{
         text-align:center;
@@ -2942,15 +2449,16 @@ RESPONSIVE FOOTER
 }
 
 
-/* ==================================================
-   TAMPILAN TABLET & HP
-================================================== */
+/* =========================================================
+   36. RESPONSIVE HP
+   Semua aturan HP disatukan di sini
+   ========================================================= */
 
 @media(max-width:768px){
 
-    /* =========================
-       NAVBAR
-    ========================= */
+    /* =====================================================
+       NAVBAR HP
+       ===================================================== */
 
     .custom-navbar{
         padding:6px 12px !important;
@@ -3000,9 +2508,7 @@ RESPONSIVE FOOTER
     }
 
 
-    /* =========================
-       MENU NAVBAR
-    ========================= */
+
 
     .navbar-nav{
         margin-top:8px;
@@ -3036,9 +2542,7 @@ RESPONSIVE FOOTER
     }
 
 
-    /* =========================
-       SOCIAL MEDIA NAVBAR
-    ========================= */
+
 
     .navbar .fa-instagram,
     .navbar .fa-youtube,
@@ -3047,16 +2551,16 @@ RESPONSIVE FOOTER
     }
 
 
-    /* =========================
-       SLIDER
-    ========================= */
+    /* =====================================================
+       SLIDER HP
+       ===================================================== */
 
     .slider-img{
-       width:100%;
-    aspect-ratio:16 / 9;
-    height:auto !important;
-    object-fit:cover;
-    object-position:center center;
+        width:100%;
+        aspect-ratio:16 / 9;
+        height:auto !important;
+        object-fit:cover;
+        object-position:center center;
     }
 
     .carousel-caption{
@@ -3082,20 +2586,82 @@ RESPONSIVE FOOTER
     }
 
 
+    /* =====================================================
+       BERITA UTAMA HP
+       ===================================================== */
 
-}
-/* ==================================================
-   FIX MOBILE FASILITAS & PELAYANAN
-================================================== */
+    .berita-utama{
+        height:250px;
+    }
 
-@media (max-width: 768px){
+    .card-body{
+        padding:20px;
+    }
 
-    /* =========================
-       FASILITAS
-    ========================= */
+    .card-body h3{
+        font-size:24px;
+    }
+
+
+    /* =====================================================
+       PROFIL HP
+       ===================================================== */
+
+    .profil-header{
+        padding:60px 15px;
+    }
+
+    .profil-header h1{
+        font-size:34px;
+    }
+
+    .profil-deskripsi{
+        padding-left:0;
+    }
+
+    .visi-misi{
+        padding:50px 15px;
+    }
+
+    .visi-box,
+    .misi-box{
+        padding:25px 20px;
+    }
+
+    .visi-box p{
+        font-size:18px;
+        line-height:30px;
+    }
+
+    .misi-list li{
+        font-size:15px;
+    }
+
+
+    /* =====================================================
+       STRUKTUR ORGANISASI HP
+       ===================================================== */
+
+    .struktur-section{
+        padding:50px 15px;
+    }
+
+    .struktur-img{
+        width:100%;
+        max-width:500px;
+    }
+
+
+    /* =====================================================
+       FASILITAS HP
+       ===================================================== */
 
     .fasilitas-header{
-        padding:0px 15px 40px !important;
+        /*
+           Jarak atas dibuat cukup agar foto tidak tenggelam
+           di bawah navbar pada HP.
+        */
+        padding:90px 15px 40px !important;
         text-align:center !important;
     }
 
@@ -3147,9 +2713,7 @@ RESPONSIVE FOOTER
         padding:12px 20px !important;
     }
 
-
-    /* DAFTAR FASILITAS */
-
+    
     .fasilitas-list{
         padding:50px 15px !important;
     }
@@ -3195,12 +2759,12 @@ RESPONSIVE FOOTER
     }
 
 
-    /* =========================
-       PELAYANAN
-    ========================= */
+    /* =====================================================
+       PELAYANAN HP
+       ===================================================== */
 
     .pelayanan-header{
-        padding:90px 15px 40px !important;
+        padding:100px 15px 40px !important;
         text-align:center !important;
     }
 
@@ -3253,9 +2817,7 @@ RESPONSIVE FOOTER
     }
 
 
-    /* =========================
-       STANDAR PELAYANAN
-    ========================= */
+
 
     .standar-pelayanan{
         padding:50px 15px !important;
@@ -3297,7 +2859,197 @@ RESPONSIVE FOOTER
         line-height:1.7 !important;
     }
 
+
+    /* =====================================================
+       DETAIL LAYANAN HP
+       ===================================================== */
+
+    .detail-layanan-page{
+        padding:20px 10px;
+    }
+
+    .detail-card{
+        width:95%;
+        padding:22px;
+    }
+
+    .detail-header h1{
+        font-size:26px;
+    }
+
+    .detail-header p{
+        font-size:14px;
+    }
+
+    .layanan-section h3{
+        font-size:18px;
+    }
+
+    .layanan-section li{
+        font-size:14px;
+    }
+
+    .layanan-box h4,
+    .info-box strong{
+        font-size:16px;
+    }
+
+    .layanan-box p,
+    .info-box p{
+        font-size:14px;
+    }
+
+    .btn-kembali{
+        width:100%;
+        text-align:center;
+        justify-content:center;
+    }
+
+
+    /* =====================================================
+       QR PENGADUAN HP
+       ===================================================== */
+
+    .qr-pengaduan{
+        padding:25px 15px;
+    }
+
+    .gambar-qr{
+        width:200px;
+        height:200px;
+    }
+
+
+    /* =====================================================
+       ALUR PENGADUAN HP
+       ===================================================== */
+
+    .alur-box{
+        grid-template-columns:1fr;
+    }
+
+    .alur-item{
+        padding:25px;
+    }
+
+
+    /* =====================================================
+       KONTAK HP
+       ===================================================== */
+
+    .hero-kontak{
+        padding:90px 15px 35px;
+    }
+
+    .hero-kontak h1{
+        font-size:30px;
+    }
+
+    .kontak-section{
+        width:90%;
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .maps iframe{
+        height:300px;
+    }
+
+    .social{
+        flex-wrap:wrap;
+    }
+
+
+    /* =====================================================
+       BERITA HP
+       ===================================================== */
+
+    .header-berita{
+        padding:90px 15px 30px;
+    }
+
+    .header-berita h1{
+        font-size:30px;
+    }
+
+    .header-berita p{
+        font-size:14px;
+    }
+
+    .berita-list{
+        width:95%;
+    }
+
+    .berita-item{
+        flex-direction:column;
+        padding:15px;
+    }
+
+    .berita-img{
+        width:100%;
+    }
+
+    .berita-img img{
+        height:220px;
+    }
+
+    .judul-berita{
+        font-size:22px;
+    }
+
+    .ringkasan-berita{
+        font-size:14px;
+    }
+
+
+    /* =====================================================
+       FOOTER HP
+       ===================================================== */
+
+    .footer{
+        padding:50px 15px 25px;
+    }
+
+    .footer p,
+    .footer-item span{
+        font-size:15px;
+        line-height:27px;
+    }
+
+    .footer-social{
+        gap:12px;
+    }
+
+    .footer-social a{
+        width:48px;
+        height:48px;
+        font-size:21px;
+    }
+
+    .footer-map iframe{
+        height:220px;
+    }
+
 }
 
 
+/* =========================================================
+   37. HP KECIL
+   ========================================================= */
+
+@media(max-width:576px){
+
+    .fasilitas-header h1{
+        font-size:30px !important;
+    }
+
+    .fasilitas-header p{
+        font-size:15px !important;
+    }
+
+    .fasilitas-header .btn{
+        width:100% !important;
+    }
+
+}
 
