@@ -2675,8 +2675,61 @@ section h2::after{
     .misi-list li{
         font-size:15px;
     }
+    
+/* =========================================================
+   SLIDER GURU DI HP
+   ========================================================= */
+@media (max-width:768px){
+
+    .guru-slider{
+        width:100%;
+        overflow:hidden;
+        position:relative;
+    }
+
+    .guru-track{
+        display:flex !important;
+        flex-wrap:nowrap !important;
+        gap:15px !important;
+        width:max-content !important;
+
+        animation: guruGeserHP 30s ease-in-out infinite alternate !important;
+    }
+
+    .guru-card{
+        width:190px !important;
+        min-width:190px !important;
+        flex:0 0 190px !important;
+    }
+
+    .guru-card img{
+        width:100% !important;
+        height:230px !important;
+        object-fit:cover !important;
+        display:block;
+    }
+
+}
 
 
+/* =========================================================
+   SLIDER GURU HP
+   Bergerak ke kiri lalu kembali
+   ========================================================= */
+
+@keyframes guruGeserHP{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    100%{
+        transform:translateX(
+            calc(-100% + 100vw)
+        );
+    }
+
+}
     /* =====================================================
        STRUKTUR ORGANISASI HP
        ===================================================== */
