@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -227,4 +227,4 @@
 <script src="assets/js/script.js"></script>
 
 </body>
-<html>
+</html>

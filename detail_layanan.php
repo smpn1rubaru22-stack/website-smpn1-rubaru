@@ -20,6 +20,7 @@ if(!$layanan){
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title><?= htmlspecialchars($layanan['judul']); ?> | SMP Negeri 1 Rubaru</title>
+<link rel="icon" type="image/png" href="upload/logo/logo.png?v=1">
 
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
