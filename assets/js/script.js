@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!slider) return;
 
-    let autoScroll = null;
+    let autoScroll;
     let sedangDisentuh = false;
 
 
@@ -226,12 +226,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
             slider.scrollLeft += 1;
 
+            /*
+               Jika sudah sampai ujung,
+               kembali ke awal
+            */
+
             if (
                 slider.scrollLeft + slider.clientWidth
                 >= slider.scrollWidth - 2
             ) {
 
-                clearInterval(autoScroll);
+                slider.scrollLeft = 0;
 
             }
 
@@ -241,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =========================
-       JARI MENYENTUH
+       SAAT JARI MENYENTUH
     ========================= */
 
     slider.addEventListener("touchstart", function () {
@@ -256,24 +261,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =========================
-       JARI DILEPAS
+       SAAT JARI DILEPAS
     ========================= */
 
     slider.addEventListener("touchend", function () {
 
         sedangDisentuh = false;
 
+        /*
+           Tunggu sebentar setelah user selesai
+           menggeser, kemudian lanjut otomatis
+        */
+
         setTimeout(function () {
 
-            if (
-                slider.scrollLeft + slider.clientWidth
-                >= slider.scrollWidth - 2
-            ) {
-
-                slider.scrollLeft = 0;
-
-            }
-
+            
             mulaiSlider();
 
         }, 1500);
@@ -284,7 +286,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =========================
-       MULAI SLIDER
+       MULAI OTOMATIS
     ========================= */
 
     mulaiSlider();
