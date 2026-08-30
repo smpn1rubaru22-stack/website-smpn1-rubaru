@@ -13,6 +13,7 @@ $layanan = mysqli_query($conn, "SELECT * FROM layanan ORDER BY id DESC");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Profil | SMP Negeri 1 Rubaru</title>
+    <link rel="icon" type="image/png" href="upload/logo/logo.png?v=1">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +27,7 @@ $layanan = mysqli_query($conn, "SELECT * FROM layanan ORDER BY id DESC");
         rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css?v=5">
+    <link rel="stylesheet" href="assets/css/style.css?v=6">
 
 </head>
 <body>

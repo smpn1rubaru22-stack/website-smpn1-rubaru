@@ -510,7 +510,7 @@ section h2::after{
    ========================================================= */
 
 .profil-header{
-    padding:60px 0;
+    padding:40px 0;
     background:#f8f9fa;
 }
 
@@ -1619,7 +1619,46 @@ section h2::after{
 
     text-align:justify;
 }
+/* ==================================================
+   HALAMAN LAYANAN PENGADUAN - MODERN
+================================================== */
 
+.layanan-detail{
+    max-width:1100px;
+    margin:0 auto;
+    padding:70px 20px 20px;
+    text-align:center;
+}
+
+/* ================= JUDUL ================= */
+
+.layanan-detail > h1{
+    color:#0b3b63;
+    font-size:38px;
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+.layanan-detail .garis{
+    width:70px;
+    height:4px;
+    background:#ffc107;
+    border-radius:20px;
+    margin:0 auto 25px;
+}
+
+/* ================= DESKRIPSI ================= */
+
+.deskripsi-layanan{
+    max-width:1200;
+    margin:0 auto 45px;
+    padding:0 20px;
+    color:#555;
+    font-size:16px;
+    line-height:1.9;
+    text-align:center;
+
+}
 
 /* =========================================================
    27. QR PENGADUAN
@@ -1926,7 +1965,7 @@ section h2::after{
 
     color:white;
 
-    padding:100px 10% 45px;
+    padding:90px 10% 15px;
 
 }
 
@@ -2237,7 +2276,7 @@ section h2::after{
 
     color:white;
 
-    padding:40px 0 30px;
+    padding:40px 0 15px;
 
 
 }
@@ -2965,7 +3004,7 @@ section h2::after{
        ===================================================== */
 
     .header-berita{
-        padding:90px 15px 30px;
+        padding:60px 15px 30px;
     }
 
     .header-berita h1{
