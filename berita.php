@@ -52,7 +52,7 @@ LIMIT $mulai,$batas");
 <body>
 <?php include "partial/navbar.php"; ?>
 
-<section class="header-berita">
+<section class="header-berita" style="padding-top:50px; padding-bottom:25px;">
 
     <div class="container">
 
