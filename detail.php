@@ -101,8 +101,7 @@ LIMIT 3
           rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet"
-          href="assets/css/style.css?v=7">
+    <link rel="stylesheet"href="assets/css/style.css?v=8">
 
 </head>
 
