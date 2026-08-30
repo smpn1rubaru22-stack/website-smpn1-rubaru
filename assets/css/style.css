@@ -2485,7 +2485,7 @@ section h2::after{
 
 .detail-berita-page{
     width:100%;
-    padding:80px 0 30px;
+    padding:80px 35px 30px;
 }
 
 .detail-berita{
@@ -2669,10 +2669,7 @@ section h2::after{
 
 @media(max-width:900px){
 
-    .detail-berita{
-        padding:0 15px;
-    }
-
+    
     .detail-judul{
         font-size:25px;
         line-height:1.4;
@@ -2693,7 +2690,7 @@ section h2::after{
         line-height:1.8;
     }
 
-    
+
     .detail-gambar-tengah{
         display:block;
         width:auto;
