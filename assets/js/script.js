@@ -87,36 +87,151 @@ if(btnPelayanan && standarPelayanan){
 }
 
 /* =========================================================
+   TOMBOL FASILITAS
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const tombol = document.getElementById("btnFasilitas");
+    const daftar = document.getElementById("daftarFasilitas");
+
+    if (tombol && daftar) {
+
+        tombol.addEventListener("click", function () {
+
+            daftar.classList.toggle("show");
+
+            if (daftar.classList.contains("show")) {
+
+                tombol.innerHTML = "Sembunyikan Fasilitas";
+
+                daftar.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            } else {
+
+                tombol.innerHTML = "Jelajahi Fasilitas";
+
+            }
+
+        });
+
+    }
+
+});
+
+
+/* =========================================================
+   TOMBOL VISI MISI
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const btnVisi = document.getElementById("btnVisiMisi");
+    const visi = document.getElementById("visiMisi");
+
+    if (btnVisi && visi) {
+
+        btnVisi.addEventListener("click", function () {
+
+            visi.classList.toggle("show");
+
+            if (visi.classList.contains("show")) {
+
+                btnVisi.innerHTML = "Sembunyikan Visi & Misi";
+
+                visi.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            } else {
+
+                btnVisi.innerHTML = "Lihat Visi & Misi";
+
+            }
+
+        });
+
+    }
+
+});
+
+
+/* =========================================================
+   STANDAR PELAYANAN
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const btnPelayanan = document.getElementById("btnPelayanan");
+    const standarPelayanan =
+        document.getElementById("standarPelayanan");
+
+    if (btnPelayanan && standarPelayanan) {
+
+        btnPelayanan.addEventListener("click", function () {
+
+            standarPelayanan.classList.toggle("show");
+
+            if (standarPelayanan.classList.contains("show")) {
+
+                btnPelayanan.innerHTML =
+                    "Sembunyikan Standar Pelayanan";
+
+                standarPelayanan.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            } else {
+
+                btnPelayanan.innerHTML =
+                    "Jelajahi Standar Pelayanan";
+
+            }
+
+        });
+
+    }
+
+});
+
+
+/* =========================================================
    SLIDER GURU
    AUTO SLIDE + GESER JARI DI HP
 ========================================================= */
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
 
     const slider = document.querySelector(".guru-slider");
 
-    if(!slider) return;
+    if (!slider) return;
 
-    let autoScroll;
+    let autoScroll = null;
     let sedangDisentuh = false;
 
+
     /* =========================
-       AUTO SLIDER
+       AUTO SLIDE
     ========================= */
 
-    function mulaiSlider(){
+    function mulaiSlider() {
 
         clearInterval(autoScroll);
 
-        autoScroll = setInterval(function(){
+        autoScroll = setInterval(function () {
 
-            if(sedangDisentuh) return;
+            if (sedangDisentuh) return;
 
             slider.scrollLeft += 1;
 
-            if(slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 2){
+            if (
+                slider.scrollLeft + slider.clientWidth
+                >= slider.scrollWidth - 2
+            ) {
 
-                slider.scrollLeft = 0;
+                clearInterval(autoScroll);
 
             }
 
@@ -124,44 +239,52 @@ document.addEventListener("DOMContentLoaded", function(){
 
     }
 
-    function berhentiSlider(){
-
-        clearInterval(autoScroll);
-
-    }
-
 
     /* =========================
-       SENTUH HP
+       JARI MENYENTUH
     ========================= */
 
-
-    slider.addEventListener("touchstart", function(){
+    slider.addEventListener("touchstart", function () {
 
         sedangDisentuh = true;
 
-        berhentiSlider();
+        clearInterval(autoScroll);
 
-    }, {passive:true});
+    }, {
+        passive: true
+    });
 
 
+    /* =========================
+       JARI DILEPAS
+    ========================= */
 
-
-    slider.addEventListener("touchend", function(){
+    slider.addEventListener("touchend", function () {
 
         sedangDisentuh = false;
 
-        setTimeout(function(){
+        setTimeout(function () {
+
+            if (
+                slider.scrollLeft + slider.clientWidth
+                >= slider.scrollWidth - 2
+            ) {
+
+                slider.scrollLeft = 0;
+
+            }
 
             mulaiSlider();
 
         }, 1500);
 
-    }, {passive:true});
+    }, {
+        passive: true
+    });
 
 
     /* =========================
-       MULAI
+       MULAI SLIDER
     ========================= */
 
     mulaiSlider();

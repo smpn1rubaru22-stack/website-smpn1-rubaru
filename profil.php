@@ -42,7 +42,7 @@ $struktur = mysqli_fetch_assoc(
         rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css?v=6">
+    <link rel="stylesheet" href="assets/css/style.css?v=7">
 
 </head>
 
