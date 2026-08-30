@@ -2542,7 +2542,7 @@ PDF VIEWER dokymen standar pelayanan
     background:#075985;
 
     color:white;
-
+    
     padding:60px 10% 35px;
 
 }
@@ -2560,11 +2560,11 @@ PDF VIEWER dokymen standar pelayanan
 
 
 .header-berita p{
-
-    font-size:15px;
-
-    margin:0;
     
+    font-size:15px;
+    
+    margin:0;
+
 }
 
 .berita-list{
