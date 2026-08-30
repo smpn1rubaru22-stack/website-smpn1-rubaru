@@ -2539,7 +2539,7 @@ PDF VIEWER dokymen standar pelayanan
 
 
 /* =========================
-   HEADER BERITA
+   HEADER BERITA HP
 ========================= */
 
 .header-berita{
@@ -3080,37 +3080,7 @@ RESPONSIVE FOOTER
     }
 
 
-    /* =========================
-       BERITA
-    ========================= */
-
-    .berita-utama{
-        height:250px;
-    }
-
-    .card-body{
-        padding:20px;
-    }
-
-    .card-body h3{
-        font-size:24px;
-    }
-
-    .berita-item{
-        flex-direction:column;
-    }
-
-    .berita-img{
-        width:100%;
-    }
-
-    .berita-img img{
-        height:220px;
-    }
-
-    .judul-berita{
-        font-size:22px;
-    }
+    
 }
 /* ==================================================
    FIX MOBILE FASILITAS & PELAYANAN
