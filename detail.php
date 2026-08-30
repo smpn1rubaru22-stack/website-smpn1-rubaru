@@ -36,7 +36,9 @@ LIMIT 3
 
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -77,36 +79,49 @@ LIMIT 3
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
-    <title>SMP Negeri 1 Rubaru</title>
+    <title>
+        <?= htmlspecialchars($berita['judul']); ?> |
+        SMP Negeri 1 Rubaru
+    </title>
 
-    <link rel="icon" type="image/png" href="upload/logo/logo.png?v=1">
+    <link rel="icon"
+          type="image/png"
+          href="upload/logo/logo.png?v=1">
+
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css?v=3">
+    <link rel="stylesheet"
+          href="assets/css/style.css?v=7">
 
 </head>
 
 
 <body>
+
 <?php include "partial/navbar.php"; ?>
+
+
 <!-- ================= DETAIL BERITA ================= -->
 
-<section class="container" style="padding-top:100px; padding-bottom:50px;">
+<section class="detail-berita-page" style="padding-top:80px;">
 
-    <div class="container">
+    <div class="detail-berita">
 
         <!-- Tombol Kembali -->
 
-        <a href="berita.php" class="btn btn-outline-primary mb-4">
+        <a href="berita.php"
+           class="btn btn-outline-primary btn-kembali-berita">
 
             <i class="fa-solid fa-arrow-left"></i>
 
@@ -114,13 +129,15 @@ LIMIT 3
 
         </a>
 
+
         <!-- Judul -->
 
-        <h2 class="detail-judul">
+        <h1 class="detail-judul">
 
             <?= htmlspecialchars($berita['judul']); ?>
 
-        </h2>
+        </h1>
+
 
         <!-- Tanggal -->
 
@@ -132,79 +149,244 @@ LIMIT 3
 
         </p>
 
-       
-<div class="row g-5 align-items-start">
 
-    <!-- ================= ISI BERITA ================= -->
 
-    <div class="col-lg-8">
+        <!-- ================= ISI BERITA ================= -->
 
         <div class="detail-isi">
 
             <?php
+
             // Pisahkan isi berita berdasarkan paragraf
-            $paragraf = preg_split('/\r\n|\r|\n/', trim($berita['isi']));
+            $paragraf = preg_split(
+                '/\r\n|\r|\n/',
+                trim($berita['isi'])
+            );
 
             // Hapus paragraf kosong
-            $paragraf = array_values(array_filter($paragraf, function($p){
-                return trim($p) !== '';
-            }));
+            $paragraf = array_values(
+                array_filter($paragraf, function($p){
+
+                    return trim($p) !== '';
+
+                })
+            );
 
             $jumlah = count($paragraf);
 
+
             // Tentukan posisi gambar
             $posisiGambar2 = ceil($jumlah / 3);
+
             $posisiGambar3 = ceil(($jumlah * 2) / 3);
 
-            // Gambar 1 - AWAL
+
+            // ================= GAMBAR 1 =================
+
             if(!empty($berita['gambar1'])) {
+
             ?>
-                <img src="upload/berita/<?= htmlspecialchars($berita['gambar1']); ?>"
-                     class="img-fluid rounded shadow detail-gambar-tengah mb-4"
-                     alt="<?= htmlspecialchars($berita['judul']); ?>">
+
+                <img
+                    src="upload/berita/<?= htmlspecialchars($berita['gambar1']); ?>"
+                    class="detail-gambar-tengah"
+                    alt="<?= htmlspecialchars($berita['judul']); ?>"
+                >
+
             <?php
+
             }
 
-            // Tampilkan paragraf satu per satu
+
+            // ================= PARAGRAF =================
+
             foreach($paragraf as $index => $p) {
 
                 echo '<p>' . htmlspecialchars($p) . '</p>';
 
-                // Gambar 2 - TENGAH
-                if(($index + 1) == $posisiGambar2 && !empty($berita['gambar2'])) {
+
+                // ================= GAMBAR 2 =================
+
+                if(
+                    ($index + 1) == $posisiGambar2 &&
+                    !empty($berita['gambar2'])
+                ) {
+
                 ?>
-                    <img src="upload/berita/<?= htmlspecialchars($berita['gambar2']); ?>"
-                         class="img-fluid rounded shadow detail-gambar-tengah mb-4"
-                         alt="<?= htmlspecialchars($berita['judul']); ?>">
+
+                    <img
+                        src="upload/berita/<?= htmlspecialchars($berita['gambar2']); ?>"
+                        class="detail-gambar-tengah"
+                        alt="<?= htmlspecialchars($berita['judul']); ?>"
+                    >
+
                 <?php
+
                 }
 
-                // Gambar 3 - AKHIR
-                if(($index + 1) == $posisiGambar3 && !empty($berita['gambar3'])) {
+
+                // ================= GAMBAR 3 =================
+
+                if(
+                    ($index + 1) == $posisiGambar3 &&
+                    !empty($berita['gambar3'])
+                ) {
+
                 ?>
-                    <img src="upload/berita/<?= htmlspecialchars($berita['gambar3']); ?>"
-                         class="img-fluid rounded shadow detail-gambar-tengah mb-4"
-                         alt="<?= htmlspecialchars($berita['judul']); ?>">
+
+                    <img
+                        src="upload/berita/<?= htmlspecialchars($berita['gambar3']); ?>"
+                        class="detail-gambar-tengah"
+                        alt="<?= htmlspecialchars($berita['judul']); ?>"
+                    >
+
                 <?php
+
                 }
+
             }
+
             ?>
 
         </div>
 
-    </div>
-</div>
-```
 
-</section>
+<!-- ================= BAGIKAN BERITA ================= -->
+
+<?php
+$url_share = $base_url . "/detail.php?slug=" . urlencode($berita['slug']);
+$judul_share = $berita['judul'];
+
+$wa_link = "https://wa.me/?text=" . urlencode(
+    $judul_share . " - " . $url_share
+);
+
+$telegram_link = "https://t.me/share/url?url=" .
+    urlencode($url_share) .
+    "&text=" .
+    urlencode($judul_share);
+
+$facebook_link = "https://www.facebook.com/sharer/sharer.php?u=" .
+    urlencode($url_share);
+?>
+
+<div class="bagikan-berita">
+
+    <h4>
+        <i class="fa-solid fa-share-nodes"></i>
+        Bagikan
+    </h4>
+
+    <div class="bagikan-tombol">
+
+        <!-- WhatsApp -->
+        <a
+            href="<?= htmlspecialchars($wa_link); ?>"
+            target="_blank"
+            rel="noopener"
+            class="share-wa"
+            title="Bagikan ke WhatsApp"
+        >
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+
+        <!-- Telegram -->
+        <a
+            href="<?= htmlspecialchars($telegram_link); ?>"
+            target="_blank"
+            rel="noopener"
+            class="share-telegram"
+            title="Bagikan ke Telegram"
+        >
+            <i class="fa-brands fa-telegram"></i>
+        </a>
+
+
+        <!-- TikTok -->
+        <a
+            href="https://www.tiktok.com/"
+            target="_blank"
+            rel="noopener"
+            class="share-tiktok"
+            title="TikTok"
+        >
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+
+        <!-- Instagram -->
+        <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener"
+            class="share-instagram"
+            title="Instagram"
+        >
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+
+        <!-- Facebook -->
+        <a
+            href="<?= htmlspecialchars($facebook_link); ?>"
+            target="_blank"
+            rel="noopener"
+            class="share-fb"
+            title="Bagikan ke Facebook"
+        >
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+
+        <!-- Salin Link -->
+        <a
+            href="javascript:void(0);"
+            onclick="salinLink();"
+            class="share-copy"
+            title="Salin Link"
+        >
+            <i class="fa-solid fa-link"></i>
+        </a>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function salinLink(){
+
+    const link = <?= json_encode($url_share); ?>;
+
+    navigator.clipboard.writeText(link)
+        .then(function(){
+
+            alert("Link berita berhasil disalin!");
+
+        })
+        .catch(function(){
+
+            alert("Gagal menyalin link.");
+
+        });
+
+}
+
+</script>
+
 
 <!-- ================= BERITA LAINNYA ================= -->
 
 <div class="container mt-5">
 
     <h3 class="fw-bold mb-4">
+
         Berita Lainnya
+
     </h3>
+
 
     <div class="row">
 
@@ -226,31 +408,43 @@ LIMIT 3
 
             <div class="card shadow-sm h-100">
 
-                <img src="upload/berita/<?= $data['gambar1']; ?>"
-                     class="card-img-top"
-                     style="height:200px; object-fit:cover;">
+                <img
+                    src="upload/berita/<?= $data['gambar1']; ?>"
+                    class="card-img-top"
+                    style="height:200px; object-fit:cover;"
+                >
 
 
                 <div class="card-body">
 
                     <h5 class="fw-bold">
+
                         <?= $data['judul']; ?>
+
                     </h5>
 
 
                     <small class="text-muted">
+
                         <?= date('d F Y', strtotime($data['tanggal'])); ?>
+
                     </small>
 
 
                     <p class="mt-3">
+
                         <?= substr(strip_tags($data['isi']),0,120); ?>...
+
                     </p>
 
 
-                    <a href="detail.php?slug=<?= $data['slug']; ?>"
-                       class="btn btn-primary btn-sm">
-                       Baca Selengkapnya
+                    <a
+                        href="detail.php?slug=<?= $data['slug']; ?>"
+                        class="btn btn-primary btn-sm"
+                    >
+
+                        Baca Selengkapnya
+
                     </a>
 
                 </div>
@@ -265,10 +459,13 @@ LIMIT 3
     </div>
 
 </div>
-  
+
+
 <?php include "partial/footer.php"; ?>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

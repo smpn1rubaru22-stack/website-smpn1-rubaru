@@ -2372,7 +2372,7 @@ section h2::after{
 
     color:white;
 
-    padding:40px 0 15px;
+    padding:45px 0 15px;
 
 
 }
@@ -2408,7 +2408,7 @@ section h2::after{
 
 .berita-list{
     width:100%;
-    max-width:100%;
+
     margin:0 auto;
 
 }
@@ -2477,6 +2477,173 @@ section h2::after{
 
 .btn-baca:hover{
     color:#084298;
+}
+
+/* =========================================================
+   DETAIL BERITA
+========================================================= */
+.btn-kembali-berita{
+    display:block;
+    width:max-content;
+    margin:20px 370px 0px;
+    padding:12px 28px;
+    background:#0d6efd;
+    color:#fff !important;
+    border-radius:30px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-kembali-berita:hover{
+    background:#084298;
+    transform:translateY(-3px);
+}
+.detail-judul{
+    text-align:left;
+    color:#0d6efd;
+    font-size:32px;
+    font-weight:700;
+    line-height:1.4;
+    margin:10px 370px 0px;
+
+}
+
+.detail-tanggal{
+    text-align:left;
+    color:#302c2c;
+    font-size:14px;
+    margin:20px 370px 10px;
+}
+
+.detail-isi{
+    max-width:900px;
+    margin:0 auto;
+    padding:0 20px;
+}
+
+.detail-isi p{
+    color:#444;
+    font-size:16px;
+    line-height:1.9;
+    margin-bottom:20px;
+    text-align:justify;
+
+}
+
+.detail-gambar-tengah{
+    display:block;
+    max-width:100%;
+    width:auto;
+    max-height:500px;
+    margin:25px auto;
+    object-fit:contain;
+}
+
+
+/* =========================================================
+   BAGIKAN BERITA
+========================================================= */
+
+.bagikan-berita{
+    max-width:850px;
+    margin:40px auto 20px;
+    padding:25px 20px 0;
+    text-align:center;
+    border-top:1px solid #eee;
+}
+
+.bagikan-berita h4{
+    font-size:16px;
+    color:#555;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.bagikan-tombol{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+.bagikan-tombol a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.bagikan-tombol a:hover{
+    transform:translateY(-3px);
+    opacity:.85;
+}
+
+.share-wa{
+    background:#25D366;
+}
+
+.share-telegram{
+    background:#229ED9;
+}
+
+.share-tiktok{
+    background:#000;
+}
+
+.share-instagram{
+    background:#E1306C;
+}
+
+.share-fb{
+    background:#1877F2;
+}
+
+.share-copy{
+    background:#6c757d;
+}
+
+/* =========================================================
+   DETAIL BERITA HP
+========================================================= */
+
+@media(max-width:768px){
+
+    .detail-judul{
+        font-size:25px;
+        line-height:1.4;
+    }
+
+    .detail-tanggal{
+        font-size:13px;
+        margin-bottom:25px;
+    }
+
+    .detail-isi{
+        width:100%;
+        padding:0 5px;
+    }
+
+    .detail-isi p{
+        font-size:15px;
+        line-height:1.8;
+    }
+
+    .detail-gambar-tengah{
+        max-width:100%;
+        max-height:350px;
+        margin:20px auto;
+    }
+
+    .detail-bagikan{
+        margin-top:30px;
+    }
+
 }
 
 
