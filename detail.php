@@ -101,7 +101,7 @@ LIMIT 3
           rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet"href="assets/css/style.css?v=8">
+    <link rel="stylesheet"href="assets/css/style.css?v=9">
 
 </head>
 
@@ -374,7 +374,7 @@ function salinLink(){
 }
 
 </script>
-
+</div>
 
 <!-- ================= BERITA LAINNYA ================= -->
 
