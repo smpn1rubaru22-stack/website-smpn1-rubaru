@@ -52,10 +52,11 @@ LIMIT $mulai,$batas");
 <body>
 <?php include "partial/navbar.php"; ?>
 
-<section class="header-berita">
+<section class="container" style="padding-top:5px; padding-bottom:50px;">
+     <div class="berita-list">
            <h1>Berita</h1>
         <p>Informasi terbaru SMP Negeri 1 Rubaru</p>
-        
+</div>
 </section>
 
 <!-- ================= DAFTAR BERITA ================= -->
