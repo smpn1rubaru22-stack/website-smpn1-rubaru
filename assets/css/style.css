@@ -2669,6 +2669,10 @@ section h2::after{
 
 @media(max-width:900px){
 
+    .detail-berita{
+        padding:0 15px;
+    }
+
     .detail-judul{
         font-size:25px;
         line-height:1.4;
@@ -2681,7 +2685,7 @@ section h2::after{
 
     .detail-isi{
         width:100%;
-        padding:0 5px;
+        padding:0;
     }
 
     .detail-isi p{
@@ -2689,7 +2693,7 @@ section h2::after{
         line-height:1.8;
     }
 
-
+    
     .detail-gambar-tengah{
         display:block;
         width:auto;
