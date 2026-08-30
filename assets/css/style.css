@@ -3052,9 +3052,11 @@ RESPONSIVE FOOTER
     ========================= */
 
     .slider-img{
-        height:390px !important;
-        object-fit:cover;
-        object-position:center center;
+       width:100%;
+    aspect-ratio:16 / 9;
+    height:auto !important;
+    object-fit:cover;
+    object-position:center center;
     }
 
     .carousel-caption{
