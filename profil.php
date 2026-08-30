@@ -207,29 +207,37 @@ foreach ($misi as $item) {
 
         <div class="guru-slider">
 
-            
+            <div class="guru-track">
 
-                <div class="guru-track">
+                <?php while($row = mysqli_fetch_assoc($pegawai)){ ?>
 
-<?php while($row = mysqli_fetch_assoc($pegawai)){ ?>
+                    <div class="guru-card">
 
-    <div class="guru-card">
+                        <img 
+                            src="upload/pegawai/<?= htmlspecialchars($row['foto']); ?>"
+                            alt="<?= htmlspecialchars($row['nama']); ?>"
+                        >
 
-        <img src="upload/pegawai/<?= htmlspecialchars($row['foto']); ?>"
-             alt="<?= htmlspecialchars($row['nama']); ?>">
+                        <h5>
+                            <?= htmlspecialchars($row['nama']); ?>
+                        </h5>
 
-        <h5><?= htmlspecialchars($row['nama']); ?></h5>
+                        <p>
+                            <?= htmlspecialchars($row['jabatan']); ?>
+                        </p>
 
-        <p><?= htmlspecialchars($row['jabatan']); ?></p>
+                    </div>
+
+                <?php } ?>
+
+            </div>
+
+        </div>
 
     </div>
 
-<?php } ?>
-
-</div>
 </section>
 
-</section>
 
 <!-- STRUKTUR ORGANISASI -->
 <section class="struktur-section py-5">
