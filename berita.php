@@ -45,7 +45,7 @@ LIMIT $mulai,$batas");
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css?v=3">
+    <link rel="stylesheet" href="assets/css/style.css?v=4">
 
 </head>
 
@@ -53,8 +53,15 @@ LIMIT $mulai,$batas");
 <?php include "partial/navbar.php"; ?>
 
 <section class="header-berita">
-    <h1>Berita</h1>
-    <p>Informasi terbaru SMP Negeri 1 Rubaru</p>
+
+    <div class="container">
+
+        <h1>Berita</h1>
+
+        <p>Informasi terbaru SMP Negeri 1 Rubaru</p>
+
+    </div>
+
 </section>
 
 <!-- ================= DAFTAR BERITA ================= -->

@@ -2540,22 +2540,33 @@ PDF VIEWER dokymen standar pelayanan
     HEADER BERITA
  ===================== */
 
+/* =========================
+   HEADER BERITA
+========================= */
+
 .header-berita{
 
     background:#075985;
 
     color:white;
 
-    padding:60px 10% 35px;
+    padding:60px 0 35px;
+
+}
+
+.header-berita .container{
+
+    padding-left:12px;
+
+    padding-right:12px;
 
 }
 
 .header-berita h1{
 
-    
-    margin:0 0 8px;
-
     font-size:32px;
+
+    margin:0 0 8px;
 
     font-weight:700;
 
@@ -2565,9 +2576,10 @@ PDF VIEWER dokymen standar pelayanan
 
 .header-berita p{
 
-    margin:0;
-
+    
     font-size:15px;
+
+    margin:0;
 
 }
 
