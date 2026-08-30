@@ -85,3 +85,55 @@ if(btnPelayanan && standarPelayanan){
     });
 
 }
+
+/* =========================================================
+   SLIDER GURU OTOMATIS + GESER JARI
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    const slider = document.querySelector(".guru-slider");
+
+    if(!slider) return;
+
+    let autoScroll;
+
+    function mulaiSlider(){
+
+        autoScroll = setInterval(function(){
+
+            slider.scrollLeft += 1;
+
+            if(slider.scrollLeft + slider.clientWidth >= slider.scrollWidth){
+
+                slider.scrollLeft = 0;
+
+            }
+
+        }, 25);
+
+    }
+
+    function berhentiSlider(){
+
+        clearInterval(autoScroll);
+
+    }
+
+    mulaiSlider();
+
+    /* Berhenti sementara ketika disentuh */
+    slider.addEventListener("touchstart", function(){
+        berhentiSlider();
+    });
+
+    /* Jalankan lagi setelah jari dilepas */
+    slider.addEventListener("touchend", function(){
+
+        setTimeout(function(){
+            mulaiSlider();
+        }, 1000);
+
+    });
+
+});

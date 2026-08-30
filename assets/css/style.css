@@ -684,108 +684,133 @@ section h2::after{
    ========================================================= */
 
 .guru-section{
-
+ 
     background:#f7f9fc;
+ 
     overflow:hidden;
-
 }
 
 .guru-slider{
-
-    overflow:hidden;
+    width:100%;
+    overflow-x:auto;
+    overflow-y:hidden;
     position:relative;
 
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+
+    -webkit-overflow-scrolling:touch;
+
+    cursor:grab;
+}
+
+.guru-slider::-webkit-scrollbar{
+    display:none;
+}
+
+.guru-slider:active{
+    cursor:grabbing;
 }
 
 .guru-track{
-
+  
     display:flex;
     gap:25px;
     width:max-content;
-
-    animation:sliderGuru 60s linear infinite;
-
-}
-
-
-.guru-slider:hover .guru-track{
-
-    animation-play-state:paused;
-
-}
-
-@keyframes sliderGuru{
-
-    0%{
-
-        transform:translateX(0);
-
-    }
-
-    100%{
-
-        transform:translateX(-50%);
-
-    }
-
+    padding:10px 5px 20px;
 }
 
 .guru-card{
-
     width:230px;
+    flex:0 0 230px;
 
-    flex-shrink:0;
-
-    background:#ffffff;
-
+    background:#fff;
     border-radius:18px;
-
     overflow:hidden;
 
     box-shadow:0 8px 20px rgba(0,0,0,.12);
 
-    transition:.4s;
-
+    transition:.3s;
 }
 
 .guru-card:hover{
-
     transform:translateY(-8px);
-
 }
 
 .guru-card img{
-
     width:100%;
     height:280px;
     object-fit:cover;
-   
-    transition:.4s;
-
-}
-
-.guru-card:hover img{
-
-    transform:scale(1.08);
-
+    display:block;
 }
 
 .guru-card h5{
-
     font-size:18px;
     color:#0d6efd;
     text-align:center;
-    margin-top:15px;
-    font-weight:700;
 
+    margin:15px 10px 5px;
+
+    font-weight:700;
 }
 
 .guru-card p{
-
     text-align:center;
     color:#666;
-    margin-bottom:20px;
+
+    margin:0 10px 20px;
+
+    font-size:15px;
 }
+
+
+/* =========================================================
+   GURU HP
+   ========================================================= */
+
+@media(max-width:768px){
+
+    .guru-section{
+        overflow:hidden;
+    }
+
+    .guru-slider{
+        width:100%;
+        overflow-x:auto;
+        overflow-y:hidden;
+
+        padding:0;
+
+        touch-action:pan-x;
+        cursor:grab;
+    }
+
+    .guru-track{
+        gap:15px;
+        padding:10px 15px 20px;
+    }
+
+    .guru-card{
+        width:200px;
+        flex:0 0 200px;
+    }
+
+    .guru-card img{
+        height:250px;
+    }
+
+    .guru-card h5{
+        font-size:16px;
+    }
+
+    .guru-card p{
+        font-size:14px;
+    }
+
+
+}
+
+
 
 
 /* =========================================================
@@ -2675,61 +2700,8 @@ section h2::after{
     .misi-list li{
         font-size:15px;
     }
-    
-/* =========================================================
-   SLIDER GURU DI HP
-   ========================================================= */
-@media (max-width:768px){
-
-    .guru-slider{
-        width:100%;
-        overflow:hidden;
-        position:relative;
-    }
-
-    .guru-track{
-        display:flex !important;
-        flex-wrap:nowrap !important;
-        gap:15px !important;
-        width:max-content !important;
-
-        animation: guruGeserHP 30s ease-in-out infinite alternate !important;
-    }
-
-    .guru-card{
-        width:190px !important;
-        min-width:190px !important;
-        flex:0 0 190px !important;
-    }
-
-    .guru-card img{
-        width:100% !important;
-        height:230px !important;
-        object-fit:cover !important;
-        display:block;
-    }
-
-}
 
 
-/* =========================================================
-   SLIDER GURU HP
-   Bergerak ke kiri lalu kembali
-   ========================================================= */
-
-@keyframes guruGeserHP{
-
-    0%{
-        transform:translateX(0);
-    }
-
-    100%{
-        transform:translateX(
-            calc(-100% + 100vw)
-        );
-    }
-
-}
     /* =====================================================
        STRUKTUR ORGANISASI HP
        ===================================================== */
