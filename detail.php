@@ -458,7 +458,7 @@ function salinLink(){
     </div>
 
 </div>
-
+</section>
 
 <?php include "partial/footer.php"; ?>
 
